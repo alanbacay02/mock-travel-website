@@ -12,18 +12,20 @@ const Navbar = () => {
   const popMenuRef = useRef();
 
   useEffect(() => {
-    let handler = (e) => {
+    // Function to handle click events.
+    let handleClick = (e) => {
       if (!popMenuRef.current.contains(e.target)) {
-        setNav(false);
+        setNav(false); // Sets state `nav` to false when click event is outside `popMenuRef`.
       }
     }
-
-    document.addEventListener('mousedown', handler);
+    // Adds event listener for `mousedown` events.
+    document.addEventListener('mousedown', handleClick);
 
     return () => {
-      document.removeEventListener('mousedown', handler);
+      // Cleans event listener for `mousedown` events
+      document.removeEventListener('mousedown', handleClick);
     }
-  });
+  }, []);
 
   const handleNav = () => {
     setNav(!nav);
