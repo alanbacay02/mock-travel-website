@@ -11,6 +11,10 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const popMenuRef = useRef();
 
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
   useEffect(() => {
     // Function to handle click events.
     let handleClick = (e) => {
@@ -21,30 +25,45 @@ const Navbar = () => {
     // Adds event listener for `mousedown` events.
     document.addEventListener('mousedown', handleClick);
 
+    // Clean up event listener and remove 'no-scroll' class when component unmounts.
+    const popoutMenu = popMenuRef.current;
     return () => {
-      // Cleans event listener for `mousedown` events
       document.removeEventListener('mousedown', handleClick);
+      document.body.classList.remove('no-scroll')
+      popoutMenu.style.overflow = 'hidden';
     }
-  }, []);
+  }, [popMenuRef]);
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
+  useEffect(() => {
+    const popoutMenu = popMenuRef.current;
+    // Add or remove 'no-scroll' class based on the 'nav' state.
+    if (nav) {
+      document.body.classList.add('no-scroll');
+      popoutMenu.style.overflow = 'auto';
+    } else {
+      document.body.classList.remove('no-scroll');
+      popoutMenu.style.overflow = 'hidden';
+    }
+  }, [nav]);
+
 
   return (
     <div className='absolute z-50 top-0 left-0 right-0 flex flex-row justify-between items-center h-16 sm:h-20 md:h-24 w-full mx-auto px-2 md:px-6 text-white'>
       <h1 className='text-lg sm:text-2xl md:text-3xl font-bold hover:cursor-pointer'>STAR<span className='text-[#56ace1]'>BLAZE</span>.</h1>
       <div>
         <div className='flex w-full flex-row justify-center items-center'>
-          <p className='hidden sm:flex p-1 m-3 font-medium hover:cursor-pointer text-xs sm:text-base'><CiUser size={20} className='my-auto mx-1'/> Log in</p>
+          <div className='flex justify-center items-center p-[4px] sm:p-2 m-3 rounded-full bg-white text-black gap-1 hover:cursor-pointer'>
+          <CiUser size={20}/> 
+          <p className='font-medium text-xs sm:text-base pr-1'>Log in</p>
+          </div>
           <div className='block' onClick={handleNav}>
-            {nav ? <AiOutlineClose size={20} className='md:ml-5 hover:cursor-pointer' /> :  <SlMenu size={20} className='md:ml-5 hover:cursor-pointer' /> }
+            {nav ? <AiOutlineClose size={20} className='md:ml-2 hover:cursor-pointer' /> :  <SlMenu size={20} className='md:ml-2 hover:cursor-pointer' /> }
           </div>
         </div>
       </div>
 
       {/* Popout Menu */}
-      <div ref={popMenuRef} className={nav ? 'fixed h-screen top-0 right-0 w-[85%] sm:h-fit sm:right-4 sm:top-[80px] sm:w-[300px] sm:rounded-lg bg-white text-black ease-in-out duration-500 shadow-2xl' :  'right-[-100%] sm:right-[-100%] fixed h-screen top-0 w-[85%] sm:h-fit sm:top-[80px] sm:w-[300px] sm:rounded-lg bg-white text-black ease-in-out duration-500'}>
+      <div ref={popMenuRef} className={nav ? 'fixed sm:absolute h-screen top-0 right-0 w-[85%] sm:h-fit sm:right-4 sm:top-[80px] sm:w-[300px] sm:rounded-lg bg-white text-black ease-in-out duration-500 shadow-2xl' :  'right-[-100%] sm:right-[-100%] fixed h-screen top-0 w-[85%] sm:h-fit sm:top-[80px] sm:w-[300px] sm:rounded-lg bg-white text-black ease-in-out duration-500'}>
         <ul className='flex flex-col h-fit'>
           <li className="flex justify-end p-4 sm:hidden">
             <AiOutlineClose onClick={handleNav} size={25} />
@@ -73,13 +92,7 @@ const Navbar = () => {
             <AiOutlineQuestionCircle className='my-auto mr-5' size={20} /> 
             Help
           </li>
-          <li className='sm:hidden p-4 font-medium inline-flex hover:cursor-pointer hover:bg-gray-200'>
-            Login
-          </li>
-          <li className='sm:hidden p-4 font-medium border-b inline-flex hover:cursor-pointer hover:bg-gray-200'>
-            Signup
-          </li>
-          <li className='flex flex-row p-3 mx-auto my-auto space-x-10'>
+          <li className='flex flex-row p-3 mx-auto my-auto space-x-5 md:space-x-8 '>
             <FaFacebookSquare className='hover:cursor-pointer' size={30}/>
             <FaInstagram className='hover:cursor-pointer' size={30} />
             <FaTwitter className='hover:cursor-pointer' size={30} />
