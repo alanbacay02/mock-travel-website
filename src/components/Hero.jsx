@@ -7,10 +7,10 @@ import Typed from 'react-typed';
 const Hero = () => {
   return (
     <div className='relative h-screen w-full'>
-      <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-2 md:px-14 text-white bg-slate-900/40'>
-        <h1 className='text-3xl sm:text-5xl md:text-6xl py-6 font-bold text-center'>Uncover Hidden Horizons with Us</h1>
-        <p className='text-sm sm:text-xl md:text-2xl text-center'>Our expert team curates immersive itineraries, blending exploration, culture, and awe-inspiring encounters</p>
-        <div className='w-full max-w-[900px] flex flex-row my-5 sm:my-10 pl-2 sm:pl-4 md:pl-6 pr-2 py-1 sm:py-2 rounded-3xl bg-transparent border border-gray-100/90'>
+      <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-2 text-white bg-slate-900/40'>
+        <h1 className='text-3xl sm:text-5xl md:text-6xl py-6 font-bold text-center'>Uncover Hidden Horizons<br />with Us</h1>
+        <p className='max-w-[900px] text-sm sm:text-xl md:text-2xl sm:pt-2 text-center'>Our expert team curates immersive itineraries, blending exploration, culture, and awe-inspiring encounters</p>
+        <div className='w-full max-w-[900px] flex flex-row my-4 sm:my-8 pl-2 sm:pl-4 md:pl-6 pr-2 py-1 sm:py-2 rounded-3xl bg-transparent border border-gray-100/90'>
           <Typed
             className='w-full my-auto'
             strings={[
