@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <div className='absolute z-50 top-0 left-0 right-0 flex flex-row justify-between items-center h-16 sm:h-20 md:h-24 w-full mx-auto px-2 md:px-6 text-white'>
-      <h1 className='text-lg sm:text-2xl md:text-3xl font-bold hover:cursor-pointer'>STAR<span className='text-[#56ace1]'>BLAZE</span>.</h1>
+      <h1 className='text-lg sm:text-2xl md:text-3xl font-bold hover:cursor-pointer'>HIGH<span className='text-[#56ace1]'>LANDER</span>.</h1>
       <div>
         <div className='flex w-full flex-row justify-center items-center'>
           <div className='flex justify-center items-center p-[4px] sm:p-2 m-3 rounded-full bg-white text-black gap-1 hover:cursor-pointer'>
