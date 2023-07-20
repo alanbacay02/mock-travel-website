@@ -7,7 +7,7 @@ In this project I made use of these technologies:
 * HTML, CSS, and JS
 
 Packages I used in this project:
-* react-elastic-carousel, available [a here][1]. [1]: https://www.npmjs.com/package/react-elastic-carousel
+* react-elastic-carousel, available [here](https://www.npmjs.com/package/react-elastic-carousel)
 
 My Goals for this project that I have completed:
 * Learn how to build and leverage React Components.
@@ -19,6 +19,6 @@ My Goals for this project that I have completed:
 * Learn how to create dynamic content with Javascript (expand and collapse grids).
 
 My Socials!
-* [a Linkedin][2]: https://www.linkedin.com/in/alan-neale-bacay-ii-60aa48258/
-* [a Github][3]: https://github.com/alanbacay02
-* [a My Email][4]: galaxybacay@gmail.com
+* [Linkedin](https://www.linkedin.com/in/alan-neale-bacay-ii-60aa48258/)
+* [Github](https://github.com/alanbacay02)
+* [My Email](galaxybacay@gmail.com)
