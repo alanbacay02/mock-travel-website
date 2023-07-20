@@ -1,15 +1,15 @@
 # Mock Travel Website: Highlander
 Hello! I'm *Alan*. It seems you have found one of my website projects. This is a project that I've worked on as one of my capstones in my portfolio.
 
-In this project I made use of these technologies:
+### In this project I made use of these technologies:
 * ReactJS
 * Tailwind
 * HTML, CSS, and JS
 
-Packages I used in this project:
+### Packages I used in this project:
 * react-elastic-carousel, available [here](https://www.npmjs.com/package/react-elastic-carousel)
 
-My Goals for this project that I have completed:
+### My Goals for this project that I have completed:
 * Learn how to build and leverage React Components.
 * Learn how to style components with Tailwind.
 * Learn how to create responsive components.
@@ -18,7 +18,7 @@ My Goals for this project that I have completed:
 * Learn how to create popular components (popout menus, card components).
 * Learn how to create dynamic content with Javascript (expand and collapse grids).
 
-My Socials!
+# My Socials!
 * [Linkedin](https://www.linkedin.com/in/alan-neale-bacay-ii-60aa48258/)
 * [Github](https://github.com/alanbacay02)
 * [My Email](galaxybacay@gmail.com)
