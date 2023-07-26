@@ -16,10 +16,10 @@ const Navbar = () => {
   return (
     <div className='absolute z-50 top-0 left-0 right-0 flex flex-row justify-between items-center h-16 sm:h-20 md:h-24 w-full mx-auto px-2 md:px-6 text-white'>
       <div className='flex flex-row items-center justify-center'>
-        <div className='w-[45px] h-full sm:w-[70px] sm:h-[70px] fill-white'>
+        <div className='w-[45px] h-full sm:w-[70px] fill-white'>
           <MountainSVG />
         </div>
-        <h1 className='text-lg sm:text-2xl md:text-3xl font-bold hover:cursor-pointer'>HIGH<span className='text-[#000000]'>LANDER</span>.</h1>
+        <h1 className='text-lg sm:text-2xl md:text-3xl font-bold hover:cursor-pointer'>HIGH<span className='text-[#56ace1]'>LANDER</span>.</h1>
       </div>
       <div>
         <div className='flex w-full flex-row justify-center items-center'>
