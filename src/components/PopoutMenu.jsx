@@ -12,7 +12,7 @@ const PopoutMenu = (props) => {
     // Function to handle click events.
     let handleClick = (e) => {
       if (!menuRef.current.contains(e.target)) {
-        props.setNav(false); // Sets state `nav` to false when click event is outside `menuRef`.
+        props.setNavMenu(false); // Sets state `navMenu` to false when click event is outside `menuRef`.
       }
     }
     // Adds event listener for `mousedown` events.
@@ -29,8 +29,8 @@ const PopoutMenu = (props) => {
 
   useEffect(() => {
     const popoutMenu = menuRef.current;
-    // Add or remove 'no-scroll' class based on the 'nav' state.
-    if (props.nav) {
+    // Add or remove 'no-scroll' class based on the 'navMenu' state.
+    if (props.navMenu) {
       document.body.classList.add('no-scroll');
       popoutMenu.style.overflow = 'auto';
     } else {
@@ -44,14 +44,14 @@ const PopoutMenu = (props) => {
       {/* Popout Menu */}
       <div 
         ref={menuRef} 
-        className={ props.nav
+        className={ props.navMenu
           ? 'fixed h-screen top-0 right-0 w-[85%] bg-white text-black ease-in-out duration-500 shadow-2xl md:block md:absolute md:h-fit md:right-4 md:top-[80px] md:w-[300px] md:rounded-lg md:transition-none'
           : 'right-[-100%] fixed h-screen top-0 w-[85%] bg-white text-black ease-in-out duration-500 md:transition-none'
         }
       >
         <ul className='flex flex-col h-fit'>
           <li className="flex justify-end p-4 md:hidden">
-            <AiOutlineClose onClick={() => {props.handleNav()}} size={25} />
+            <AiOutlineClose onClick={() => {props.handleNavMenu()}} size={25} />
           </li>
           <li className="p-4 font-medium inline-flex hover:cursor-pointer hover:bg-gray-200">
             <AiOutlineInfoCircle className='my-auto mr-5' size={20} />

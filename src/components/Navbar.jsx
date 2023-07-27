@@ -7,10 +7,10 @@ import PopoutMenu from './PopoutMenu.jsx';
 
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
+  const [navMenu, setNavMenu] = useState(false);
 
-  const handleNav = () => {
-    setNav(!nav);
+  const handleNavMenu = () => {
+    setNavMenu(!navMenu);
   };
 
   return (
@@ -27,12 +27,12 @@ const Navbar = () => {
           <CiUser size={20}/> 
           <p className='font-medium text-xs sm:text-base pr-1'>Log in</p>
           </div>
-          <div className='block' onClick={handleNav}>
-            {nav ? <AiOutlineClose size={20} className='md:ml-2 hover:cursor-pointer' /> :  <SlMenu size={20} className='md:ml-2 hover:cursor-pointer' /> }
+          <div className='block' onClick={handleNavMenu}>
+            {navMenu ? <AiOutlineClose size={20} className='md:ml-2 hover:cursor-pointer' /> :  <SlMenu size={20} className='md:ml-2 hover:cursor-pointer' /> }
           </div>
         </div>
       </div>
-      <PopoutMenu nav={nav} setNav={setNav} handleNav={handleNav} />
+      <PopoutMenu navMenu={navMenu} setNavMenu={setNavMenu} handleNavMenu={handleNavMenu} />
     </div>
   );
 }
