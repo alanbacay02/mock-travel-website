@@ -24,42 +24,6 @@
   transition: opacity 1s;
 }
 
-.destination-carousel .rec-arrow {
-  min-width: min-content;
-  width: min-content;
-  height: min-content;
-  font-size: small;
-  background-color: transparent;
-  box-shadow: none;
-  color: black;
-}
-
-.destination-carousel .rec-arrow-left {
-  padding: 2px 2px 2px 8px;
-}
-
-.destination-carousel .rec-arrow-right {
-  padding: 2px 8px 2px 2px;
-}
-
-.destination-carousel .rec-arrow:hover {
-  font-size: large !important;
-  box-shadow: none !important;
-  color: black !important;
-  background-color: transparent !important;
-  cursor: pointer !important;
-}
-
-/* .destination-carousel .rec-arrow:focus {
-  box-shadow: none !important;
-  color: black !important;
-  background-color: transparent !important;
-} */
-
-/* .destination-carousel .rec-arrow:active {
-  font-size: x-large !important;
-} */
-
 
 @media screen and (min-width: 640px) {
   /* When viewport width is 640px or greater,
