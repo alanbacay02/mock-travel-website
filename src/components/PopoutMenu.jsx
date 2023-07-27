@@ -45,12 +45,12 @@ const PopoutMenu = (props) => {
       <div 
         ref={menuRef} 
         className={ props.nav
-          ? 'fixed h-screen top-0 right-0 w-[85%] bg-white text-black ease-in-out duration-500 shadow-2xl sm:block sm:absolute sm:h-fit sm:right-4 sm:top-[80px] sm:w-[300px] sm:rounded-lg sm:transition-none'
-          : 'right-[-100%] fixed h-screen top-0 w-[85%] bg-white text-black ease-in-out duration-500 sm:transition-none'
+          ? 'fixed h-screen top-0 right-0 w-[85%] bg-white text-black ease-in-out duration-500 shadow-2xl md:block md:absolute md:h-fit md:right-4 md:top-[80px] md:w-[300px] md:rounded-lg md:transition-none'
+          : 'right-[-100%] fixed h-screen top-0 w-[85%] bg-white text-black ease-in-out duration-500 md:transition-none'
         }
       >
         <ul className='flex flex-col h-fit'>
-          <li className="flex justify-end p-4 sm:hidden">
+          <li className="flex justify-end p-4 md:hidden">
             <AiOutlineClose onClick={() => {props.handleNav()}} size={25} />
           </li>
           <li className="p-4 font-medium inline-flex hover:cursor-pointer hover:bg-gray-200">
