@@ -7,7 +7,8 @@ Hello! I'm *Alan*. It seems you have found one of my website projects. This is a
 * HTML, CSS, and JS
 
 ### Packages I used in this project:
-* react-elastic-carousel, available [here](https://www.npmjs.com/package/react-elastic-carousel)
+* Swiper, available [here](https://swiperjs.com/)
+* react-typed, available [here](https://www.npmjs.com/package/react-typed)
 
 ### My Goals for this project that I have completed:
 * Learn how to build and leverage React Components.
