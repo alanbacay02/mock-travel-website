@@ -54,34 +54,34 @@ const PopoutMenu = (props) => {
             <AiOutlineClose onClick={() => {props.handleNavMenu()}} size={25} />
           </li>
           <li className="p-4 font-medium inline-flex hover:cursor-pointer hover:bg-gray-200">
-            <AiOutlineInfoCircle className='my-auto mr-5' size={20} />
+            <AiOutlineInfoCircle className='my-auto mr-5 text-blue-600' size={20} />
             About
           </li>
           <li className="p-4 font-medium inline-flex hover:cursor-pointer hover:bg-gray-200">
-            <BsGlobeAmericas className='my-auto mr-5' size={20} />
+            <BsGlobeAmericas className='my-auto mr-5 text-blue-600' size={20} />
             Destinations
           </li>
           <li className="p-4 font-medium inline-flex hover:cursor-pointer hover:bg-gray-200">
-            <BiPackage className='my-auto mr-5' size={20} />
+            <BiPackage className='my-auto mr-5 text-blue-600' size={20} />
             Packages
           </li>
           <li className="p-4 font-medium border-b inline-flex hover:cursor-pointer hover:bg-gray-200">
-            <BsClipboardCheck className='my-auto mr-5' size={20} />
+            <BsClipboardCheck className='my-auto mr-5 text-blue-600' size={20} />
             Reviews
           </li>
           <li className="p-4 font-medium inline-flex hover:cursor-pointer hover:bg-gray-200">
-            <ImPriceTag className='my-auto mr-5' size={20} />
+            <ImPriceTag className='my-auto mr-5 text-blue-600' size={20} />
             Explore Everywhere
           </li>
           <li className="p-4 font-medium border-b inline-flex hover:cursor-pointer hover:bg-gray-200">
-            <AiOutlineQuestionCircle className='my-auto mr-5' size={20} /> 
+            <AiOutlineQuestionCircle className='my-auto mr-5 text-blue-600' size={20} /> 
             Help
           </li>
           <li className='flex flex-row p-3 mx-auto my-auto space-x-5 md:space-x-8 '>
-            <FaFacebookSquare className='hover:cursor-pointer' size={30}/>
-            <FaInstagram className='hover:cursor-pointer' size={30} />
-            <FaTwitter className='hover:cursor-pointer' size={30} />
-            <FaPinterestSquare className='hover:cursor-pointer' size={30} />
+            <FaFacebookSquare className='text-blue-600 hover:cursor-pointer' size={30}/>
+            <FaInstagram className='text-blue-600 hover:cursor-pointer' size={30} />
+            <FaTwitter className='text-blue-600 hover:cursor-pointer' size={30} />
+            <FaPinterestSquare className='text-blue-600 hover:cursor-pointer' size={30} />
           </li>
         </ul>
       </div>
