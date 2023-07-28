@@ -42,12 +42,12 @@ const LoginMenu = (props) => {
     id='login-menu'
     ref={loginRef} 
     className={ props.loginMenu
-    ? 'absolute h-fit left-0 right-0 m-auto top-[20vh] w-[300px] rounded-lg bg-white text-black shadow-2xl z-30'
+    ? 'absolute h-fit left-0 right-0 m-auto top-[20vh] w-[300px] sm:w-[400px] rounded-lg bg-white text-black shadow-2xl z-30'
     : 'right-[-100%] fixed top-0 bg-white text-black'}
   >
-    <div className='flex flex-col justify-center py-4 px-5'>
+    <div className='flex flex-col justify-center py-4 px-5 max-w-[360px] mx-auto'>
       <div className='relative flex flex-row justify-center my-3'>
-        <h2 className='font-bold text-lg'>Sign In</h2>
+        <h2 className='font-bold text-lg sm:text-xl'>Sign In</h2>
         <AiOutlineClose className='absolute right-0 top-[2px] hover:cursor-pointer'  onClick={()=>{props.handleLoginMenu()}} size={20}/>
       </div>
 
@@ -55,10 +55,10 @@ const LoginMenu = (props) => {
       <form className='flex flex-col' onSubmit={handleLogin}>
         {/* Email or Phone Input field */}
         <div className='flex flex-row items-center p-1 my-3 border-b border-gray-400'>
-          <FaUser size={20} className='mr-1 fill-gray-400' />
+          <FaUser size={25} className='mr-1 fill-gray-400' />
           <label htmlFor='email' className='sr-only'>Email or Phone</label>
           <input
-            className='px-1 outline-none'
+            className='px-1 w-full outline-none sm:text-lg'
             type='email'
             id='email'
             value={email}
@@ -69,10 +69,10 @@ const LoginMenu = (props) => {
         </div>
         {/* Password Input field */}
         <div className='flex flex-row items-center p-1 mt-3 border-b border-gray-400'>
-          <FaLock size={20} className='mr-1 fill-gray-400' />
+          <FaLock size={25} className='mr-1 fill-gray-400' />
           <label htmlFor='password' className='sr-only'>Password</label>
           <input
-            className='px-1 outline-none'
+            className='px-1 w-full outline-none sm:text-lg'
             type={showPassword ? 'text' : 'password'}
             id='password'
             value={password}
@@ -80,29 +80,29 @@ const LoginMenu = (props) => {
             placeholder='Password'
             required
           />
-          <div onClick={() => {setShowPassword(!showPassword)}} className='ml-auto'>
+          <div onClick={() => {setShowPassword(!showPassword)}}>
             {showPassword ? <AiFillEyeInvisible size={20} className='fill-gray-400' /> : <AiFillEye size={20} className='ml-auto fill-gray-400' />}
           </div>
         </div>
-        {/* Replace with anchor tag. Uses <p/> element to avoid Eslint error. */}
+        {/* Forgot Password Link */}
         <a href='/#' className='m-1 underline text-blue-600 hover:cursor-pointer active:text-blue-400 text-sm font-semibold ml-auto'>Forgot Password?</a>
         {/* Submit Button */}
         <button
-          className='bg-blue-600 mx-auto my-7 px-14 py-2 rounded-lg text-white active:bg-blue-800'
+          className='bg-blue-600 mx-auto my-7 px-14 sm:px-16 py-2 rounded-lg text-white sm:text-lg active:bg-blue-800'
           type='submit'
         >
           Login
         </button>
         {/* Other Sign In methods */}
-        <label className='text-center my-2 font-medium' htmlFor='button'>Or Sign in with:</label>
+        <label className='text-center my-2 font-medium sm:text-lg' htmlFor='button'>Or Sign in with:</label>
         <div className='flex flex-row justify-center items-center gap-6 mt-2 mb-8'>
-          <button type='button' className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
             <FaFacebookF size={25} />
           </button>
-          <button type='button' className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
             <AiOutlineTwitter size={25}/>
           </button>
-          <button type='button' className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
             <FaGooglePlusG size={25}/>
           </button>
         </div>
