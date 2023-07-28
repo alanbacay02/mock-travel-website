@@ -81,11 +81,11 @@ const LoginMenu = (props) => {
             required
           />
           <div onClick={() => {setShowPassword(!showPassword)}}>
-            {showPassword ? <AiFillEyeInvisible size={20} className='fill-gray-400' /> : <AiFillEye size={20} className='ml-auto fill-gray-400' />}
+            {showPassword ? <AiFillEyeInvisible size={20} className='fill-gray-400 hover:cursor-pointer' /> : <AiFillEye size={20} className='ml-auto fill-gray-400 hover:cursor-pointer' />}
           </div>
         </div>
         {/* Forgot Password Link */}
-        <a href='/#' className='m-1 underline text-blue-600 hover:cursor-pointer active:text-blue-400 text-sm font-semibold ml-auto'>Forgot Password?</a>
+        <a href='/#' className='m-1 underline text-blue-600 hover:cursor-pointer active:text-blue-400 text-sm font-semibold ml-auto select-none'>Forgot Password?</a>
         {/* Submit Button */}
         <button
           className='bg-blue-600 mx-auto my-7 px-14 sm:px-16 py-2 rounded-lg text-white sm:text-lg active:bg-blue-800'
