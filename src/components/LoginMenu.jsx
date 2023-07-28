@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { AiOutlineClose } from 'react-icons/ai';
-import { FaFacebookF, FaGooglePlusG } from 'react-icons/fa';
-import { AiOutlineTwitter } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineTwitter, AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
+import { FaFacebookF, FaGooglePlusG, FaUser, FaLock } from 'react-icons/fa';
 
 const LoginMenu = (props) => {
   const loginRef = useRef();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     // Function to handle click events.
@@ -50,52 +50,69 @@ const LoginMenu = (props) => {
         <h2 className='font-bold text-lg'>Sign In</h2>
         <AiOutlineClose className='absolute right-0 top-[2px] hover:cursor-pointer'  onClick={()=>{props.handleLoginMenu()}} size={20}/>
       </div>
-      <form className='flex flex-col'>
-        <label htmlFor='email' className='sr-only'>Email or Phone</label>
-        <input
-          className='border-b border-gray-400 px-1 py-2 my-2 outline-none'
-          type='email'
-          id='email'
-          value={email}
-          onChange={handleEmailChange}
-          placeholder='Email or Phone'
-          required
-        />
-        <label htmlFor='password' className='sr-only'>Password</label>
-        <input
-          className='border-b border-gray-400 px-1 py-2 my-2 outline-none'
-          type='password'
-          id='password'
-          value={password}
-          onChange={handlePasswordChange}
-          placeholder='Password'
-          required
-        />
+
+      {/* Beginning of Login Form */}
+      <form className='flex flex-col' onSubmit={handleLogin}>
+        {/* Email or Phone Input field */}
+        <div className='flex flex-row items-center p-1 my-3 border-b border-gray-400'>
+          <FaUser size={20} className='mr-1 fill-gray-400' />
+          <label htmlFor='email' className='sr-only'>Email or Phone</label>
+          <input
+            className='px-1 outline-none'
+            type='email'
+            id='email'
+            value={email}
+            onChange={handleEmailChange}
+            placeholder='Email or Phone'
+            required
+          />
+        </div>
+        {/* Password Input field */}
+        <div className='flex flex-row items-center p-1 mt-3 border-b border-gray-400'>
+          <FaLock size={20} className='mr-1 fill-gray-400' />
+          <label htmlFor='password' className='sr-only'>Password</label>
+          <input
+            className='px-1 outline-none'
+            type={showPassword ? 'text' : 'password'}
+            id='password'
+            value={password}
+            onChange={handlePasswordChange}
+            placeholder='Password'
+            required
+          />
+          <div onClick={() => {setShowPassword(!showPassword)}} className='ml-auto'>
+            {showPassword ? <AiFillEyeInvisible size={20} className='fill-gray-400' /> : <AiFillEye size={20} className='ml-auto fill-gray-400' />}
+          </div>
+        </div>
         {/* Replace with anchor tag. Uses <p/> element to avoid Eslint error. */}
-        <p className='mb-4 underline text-blue-600 hover:cursor-pointer active:text-blue-400 text-sm font-semibold ml-auto'>Forgot Password?</p>
+        <a href='/#' className='m-1 underline text-blue-600 hover:cursor-pointer active:text-blue-400 text-sm font-semibold ml-auto'>Forgot Password?</a>
+        {/* Submit Button */}
         <button
-          className='bg-blue-600 mx-auto my-2 px-8 py-2 rounded-lg text-white active:bg-blue-800'
+          className='bg-blue-600 mx-auto my-7 px-14 py-2 rounded-lg text-white active:bg-blue-800'
           type='submit'
-          onClick={handleLogin}
         >
           Login
         </button>
+        {/* Other Sign In methods */}
         <label className='text-center my-2 font-medium' htmlFor='button'>Or Sign in with:</label>
-        <div className='flex flex-row justify-center items-center gap-6 mt-2 mb-10'>
-          <div className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+        <div className='flex flex-row justify-center items-center gap-6 mt-2 mb-8'>
+          <button type='button' className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
             <FaFacebookF size={25} />
-          </div>
-          <div className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+          </button>
+          <button type='button' className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
             <AiOutlineTwitter size={25}/>
-          </div>
-          <div className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+          </button>
+          <button type='button' className='px-5 py-2 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
             <FaGooglePlusG size={25}/>
-          </div>
+          </button>
         </div>
+        {/* Sign Up link */}
         <div className='border-t border-gray-400'>
-          <p className='mt-3 text-right font-normal'>Not a member? <span className='underline text-blue-600 hover:cursor-pointer'>Sign Up</span></p>
+          <p className='mt-3 text-right font-normal'>Not a member? <a href='/#' className='underline text-blue-600 hover:cursor-pointer active:text-blue-400'>Sign Up</a></p>
         </div>
       </form>
+      {/* End of Login Form */}
+
     </div>
   </div>
   );
