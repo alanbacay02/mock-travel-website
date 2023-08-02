@@ -7,21 +7,36 @@
   overflow: hidden;
 }
 
-/* Applied to hidden Destinations Card in Destinations.jsx */
-.hidden-card {
-  position: absolute;
-  visibility: hidden;
-  left: -9999px;
-  opacity: 0;
-  transition: opacity 1s;
+.slanted-container {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
 }
 
-/* Applied to showed Destinations Card in Destinations.jsx */
-.showed-card {
-  position: static;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 1s;
+.slanted-text {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.slanted-text::before, .slanted-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background-color: inherit;
+  z-index: -10;
+}
+
+.slanted-text::before {
+  left: -14px;
+  transform: skewX(-20deg);
+}
+
+.slanted-text::after {
+  right: -14px;
+  transform: skewX(-20deg);
 }
 
 
