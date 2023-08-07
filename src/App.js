@@ -1,4 +1,5 @@
 import Destinations from './components/Destinations';
+import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from "./components/Navbar";
 import ValueProposition from './components/ValueProposition';
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Destinations />
       <ValueProposition />
+      <Footer />
     </div>
   );
 }
