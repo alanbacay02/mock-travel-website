@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Newsletter = () => {
+  const [email, setEmail] = useState('');
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault() // Prevent the default form submission behavior to avoid page reload.
+    // Perform newsletter subscription logic here using the email state values.
+    console.log('Subscribing to newsletter...');
+
+    // Clear state after submission logic to prepare for another email address submission.
+    setEmail('');
+  }
+
   return (
     <div className='w-full py-12 bg-sky-400 text-black'>
       <div className='max-w-[1240px] grid md:grid-cols-2 gap-x-4 mx-auto px-6 items-center'>
@@ -9,11 +24,15 @@ const Newsletter = () => {
           <p className='text-sm sm:text-base md:text-lg text-center md:text-left'>Your dream vacation is a click away - receive the latest offers and destinations in your inbox.</p>
         </div>
         <div className='my-4'>
-          <form className='w-full' onSubmit={() => {}}>
+          <form className='w-full' onSubmit={handleEmailSubmit}>
             <div className='flex flex-col gap-x-2 gap-y-3 sm:flex-row items-center w-full justify-center'>
               <label htmlFor='email' className='sr-only'>Email</label>
               <input
                 className='rounded-lg px-4 py-2 w-full max-w-[450px] outline-none'
+                type='email'
+                id='news-email'
+                value={email}
+                onChange={handleEmailChange}
                 placeholder='Enter Email'
               />
               <button className='bg-[#fe9000] w-44 px-4 py-2 rounded-lg'>Notify Me</button>
