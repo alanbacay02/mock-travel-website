@@ -4,7 +4,7 @@ import { FaDribbbleSquare, FaFacebookSquare, FaGithubSquare, FaInstagram, FaTwit
 
 const Footer = () => {
   return (
-    <div className='w-full py-6 bg-zinc-700 text-white'>
+    <div className='w-full py-6 bg-slate-900/90 text-white'>
       {/* Grid Container */}
       <div className='grid sm:grid-cols-3 justify-center items-center mx-auto px-6 gap-5 max-w-[1240px]'>
         {/* Column 1 */}
