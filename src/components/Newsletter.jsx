@@ -35,7 +35,7 @@ const Newsletter = () => {
                 onChange={handleEmailChange}
                 placeholder='Enter Email'
               />
-              <button className='bg-[#fe9000] w-44 px-4 py-2 rounded-lg'>Notify Me</button>
+              <button className='bg-zinc-950/90 text-white w-44 px-4 py-2 rounded-lg'>Notify Me</button>
             </div>
           </form>
           <p className='text-center md:text-left my-1'>We care about the protection of your data. Read our <a href='/#' className='underline'>privacy policy</a>.</p>
