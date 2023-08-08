@@ -16,21 +16,21 @@ const ValueProposition = () => {
             src='https://images.unsplash.com/flagged/photo-1575517111839-3a3843ee7f5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' 
             alt='hotel_room.jpg' />
           <p className='text-xl'>With Highlander, we will make sure to find you the best accomodation at the best rates.</p>
-          <div className='grid grid-cols-2 gap-y-6 my-9 mx-auto xs:gap-x-16 md:gap-x-0 md:mx-0 text-gray-700 font-medium text-base md:text-xl'>
-            <div className='flex items-center gap-3'>
-              <HiOutlineSparkles className='text-3xl text-blue-600' />
+          <div className='grid grid-cols-2 gap-y-6 my-7 sm:my-9 mx-auto gap-x-3 xs:gap-x-16 md:gap-x-0 md:mx-0 text-gray-700 font-medium text-sm xs:text-base sm:text-xl'>
+            <div className='flex flex-col xs:flex-row items-center gap-3'>
+              <HiOutlineSparkles className='text-blue-600 text-lg xs:text-xl sm:text-2xl' />
               <p>Clean Rooms</p>
             </div>
-            <div className='flex items-center gap-3'>
-              <TbAirConditioning className='text-3xl text-blue-600' />
+            <div className='flex flex-col xs:flex-row items-center gap-3'>
+              <TbAirConditioning className='text-blue-600 text-lg xs:text-xl sm:text-2xl' />
               <p>Air Conditioning</p>
             </div>
-            <div className='flex items-center gap-3'>
-              <BiLockAlt className='text-3xl text-blue-600' />
+            <div className='flex flex-col xs:flex-row items-center gap-3'>
+              <BiLockAlt className='text-blue-600 text-lg xs:text-xl sm:text-2xl' />
               <p>Secure</p>
             </div>
-            <div className='flex items-center gap-3 '>
-              <AiOutlineWifi className='text-3xl text-blue-600' />
+            <div className='flex flex-col xs:flex-row items-center gap-3'>
+              <AiOutlineWifi className='text-blue-600 text-lg xs:text-xl sm:text-2xl' />
               <p>Internet/Wifi</p>
             </div>
           </div>
