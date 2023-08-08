@@ -42,7 +42,7 @@ const LoginMenu = (props) => {
     id='login-menu'
     ref={loginRef} 
     className={ props.loginMenu
-    ? 'absolute h-fit left-0 right-0 m-auto top-[20vh] w-[300px] sm:w-[400px] rounded-lg bg-white text-black shadow-2xl z-30'
+    ? 'absolute h-fit left-0 right-0 m-auto top-[20vh] w-[270px] xs:w-[300px] sm:w-[400px] rounded-lg bg-white text-black shadow-2xl z-30'
     : 'right-[-1000%] fixed top-0 bg-white text-black'}
   >
     <div className='flex flex-col justify-center py-4 px-5 max-w-[360px] mx-auto'>
