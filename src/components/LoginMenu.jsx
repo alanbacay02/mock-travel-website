@@ -42,7 +42,7 @@ const LoginMenu = (props) => {
     id='login-menu'
     ref={loginRef} 
     className={ props.loginMenu
-    ? 'absolute h-fit left-0 right-0 m-auto top-[20vh] w-[270px] xs:w-[300px] sm:w-[400px] rounded-lg bg-white text-black shadow-2xl z-30'
+    ? 'absolute h-fit left-0 right-0 m-auto top-[14vh] sm:top-[20vh] w-[250px] xs:w-[300px] sm:w-[370px] rounded-lg bg-white text-black shadow-2xl z-30'
     : 'right-[-1000%] fixed top-0 bg-white text-black'}
   >
     <div className='flex flex-col justify-center py-4 px-5 max-w-[360px] mx-auto'>
@@ -55,7 +55,7 @@ const LoginMenu = (props) => {
       <form className='flex flex-col' onSubmit={handleLogin}>
         {/* Email or Phone Input field */}
         <div className='flex flex-row items-center p-1 my-3 border-b border-gray-400'>
-          <FaUser size={25} className='mr-1 fill-gray-400' />
+          <FaUser className='sm:text-lg mr-1 fill-gray-400' />
           <label htmlFor='email' className='sr-only'>Email or Phone</label>
           <input
             className='px-1 w-full outline-none sm:text-lg'
@@ -69,7 +69,7 @@ const LoginMenu = (props) => {
         </div>
         {/* Password Input field */}
         <div className='flex flex-row items-center p-1 mt-3 border-b border-gray-400'>
-          <FaLock size={25} className='mr-1 fill-gray-400' />
+          <FaLock className='sm:text-lg mr-1 fill-gray-400' />
           <label htmlFor='password' className='sr-only'>Password</label>
           <input
             className='px-1 w-full outline-none sm:text-lg'
@@ -81,11 +81,11 @@ const LoginMenu = (props) => {
             required
           />
           <div onClick={() => {setShowPassword(!showPassword)}}>
-            {showPassword ? <AiFillEyeInvisible size={20} className='fill-gray-400 hover:cursor-pointer' /> : <AiFillEye size={20} className='ml-auto fill-gray-400 hover:cursor-pointer' />}
+            {showPassword ? <AiFillEyeInvisible className='sm:text-lg md:text-xl fill-gray-400 hover:cursor-pointer' /> : <AiFillEye className='sm:text-lg md:text-xl ml-auto fill-gray-400 hover:cursor-pointer' />}
           </div>
         </div>
         {/* Forgot Password Link */}
-        <a href='/#' className='m-1 underline text-blue-600 hover:cursor-pointer active:text-blue-400 text-sm font-semibold ml-auto select-none'>Forgot Password?</a>
+        <a href='/#' className='mr-1 mt-2 underline text-blue-600 hover:cursor-pointer text-xs sm:text-sm active:text-blue-400 font-semibold ml-auto select-none'>Forgot Password?</a>
         {/* Submit Button */}
         <button
           className='bg-blue-600 mx-auto my-7 px-14 sm:px-16 py-2 rounded-lg text-white sm:text-lg active:bg-blue-800'
@@ -95,20 +95,20 @@ const LoginMenu = (props) => {
         </button>
         {/* Other Sign In methods */}
         <label className='text-center my-2 font-medium sm:text-lg' htmlFor='button'>Or Sign in with:</label>
-        <div className='flex flex-row justify-center items-center gap-6 mt-2 mb-8'>
+        <div className='flex flex-row justify-center items-center gap-6 mt-2 mb-8 text-lg xs:text-xl sm:text-xl md:text-2xl'>
           <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
-            <FaFacebookF size={25} />
+            <FaFacebookF />
           </button>
           <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
-            <AiOutlineTwitter size={25}/>
+            <AiOutlineTwitter />
           </button>
           <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
-            <FaGooglePlusG size={25}/>
+            <FaGooglePlusG />
           </button>
         </div>
         {/* Sign Up link */}
         <div className='border-t border-gray-400'>
-          <p className='mt-3 text-right font-normal'>Not a member? <a href='/#' className='underline text-blue-600 hover:cursor-pointer active:text-blue-400'>Sign Up</a></p>
+          <p className='mt-3 text-right font-normal text-sm sm:text-base'>Not a member? <a href='/#' className='underline text-blue-600 hover:cursor-pointer active:text-blue-400'>Sign Up</a></p>
         </div>
       </form>
       {/* End of Login Form */}
