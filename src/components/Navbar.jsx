@@ -22,12 +22,14 @@ const Navbar = () => {
   return (
     <div>
       <div id='navbar' className='absolute top-0 left-0 right-0 flex flex-row justify-between items-center h-16 sm:h-20 md:h-24 w-full mx-auto px-2 md:px-6 text-white z-10'>
-        <div className='flex flex-row items-center justify-center'>
-          <div className='w-[40px] xs:w-[50px] sm:w-[70px] h-full fill-white'>
-            <MountainSVG />
+        <a href='/#'>
+          <div className='flex flex-row items-center justify-center hover:cursor-pointer'>
+            <div className='w-[35px] xs:w-[50px] sm:w-[70px] h-full fill-white'>
+              <MountainSVG />
+            </div>
+            <h1 className='xs:text-xl sm:text-2xl md:text-3xl font-bold'>HIGH<span className='text-[#56ace1]'>LANDER</span>.</h1>
           </div>
-          <h1 className='xs:text-xl sm:text-2xl md:text-3xl font-bold hover:cursor-pointer'>HIGH<span className='text-[#56ace1]'>LANDER</span>.</h1>
-        </div>
+        </a>
         <div>
           <div className='flex w-full flex-row justify-center items-center'>
             <div
