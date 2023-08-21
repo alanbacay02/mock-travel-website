@@ -4,9 +4,9 @@ import { HiOutlineLocationMarker } from 'react-icons/hi';
 
 const Card = ({image, imageAlt, rating, title, location, price}) => {
   return (
-    <figure className='relative flex flex-col h-fit w-fit mx-6 my-6 sm:hover:scale-110 transition-all duration-200 bg-white shadow-xl'> 
+    <figure className='relative flex flex-col h-fit w-fit mx-auto my-6 sm:hover:scale-110 hover:cursor-pointer transition-all duration-200 bg-white shadow-xl'> 
       {/* Insert src image here from JSON */}
-      <img className='w-[240px] md:w-[300px] h-[250px] md:h-[300px] object-cover object-center pointer-events-none' src={image} alt={imageAlt} />
+      <img className='w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] object-cover object-center pointer-events-none' src={image} alt={imageAlt} />
       <div className='absolute flex flex-row justify-center items-center top-0 right-0 px-3 mr-1 mt-2 rounded-full bg-gray-900/30 text-white hover:cursor-pointer select-none'>
         <AiFillStar className='text-amber-300' scale={10} />
         <p className='text-sm sm:text-base pl-1'>{rating}</p>
@@ -22,7 +22,10 @@ const Card = ({image, imageAlt, rating, title, location, price}) => {
           </div>
         </div>
         {/* Insert price here from JSON */}
-        <p className='text-lg sm:text-2xl'>{price}</p>
+        <div className='flex flex-col'>
+          <p className='text-xs sm:text-sm text-right'>starts at</p>
+          <p className='text-lg sm:text-2xl text-right'>{price}</p>
+        </div>
       </figcaption>
     </figure>
   );

@@ -120,13 +120,19 @@ const DestinationsSlick = () => {
     nextArrow: '.next',
     responsive: [
       {
-        breakpoint: 1200, // Change settings for viewport width 1024px and below
+        breakpoint: 1280, // Change settings for viewport width 1280px and below
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 980, // Change settings for viewport width 980px and below
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 480, // Change settings for viewport width 768px and below
+        breakpoint: 480, // Change settings for viewport width 7480px and below
         settings: {
           slidesToShow: 1,
         },
