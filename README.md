@@ -8,6 +8,7 @@ Hello! I'm *Alan*. It seems you have found one of my website projects. This is a
 
 ### Packages I used in this project:
 * Swiper, available [here](https://swiperjs.com/)
+* react-slick, available [here](https://react-slick.neostack.com/docs/get-started)
 * react-typed, available [here](https://www.npmjs.com/package/react-typed)
 
 ### My Goals for this project that I have completed:
@@ -18,6 +19,7 @@ Hello! I'm *Alan*. It seems you have found one of my website projects. This is a
 * Learn how to pass props to components.
 * Learn how to create popular components (popout menus, card components).
 * Learn how to create dynamic content with Javascript (expand and collapse grids).
+* Learn how to map over mock JSON data and display them dynamically using carousels.
 
 # My Socials!
 * [Linkedin](https://www.linkedin.com/in/alan-neale-bacay-ii-60aa48258/)
