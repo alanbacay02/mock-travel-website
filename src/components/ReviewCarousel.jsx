@@ -65,8 +65,8 @@ const ReviewCarousel = () => {
       <Slider ref={slider} {...settings}>
         {REVIEWS.map((item, index) => {
           return (
-            <div key={'review' + index} className='px-3'>
-              <div id='speech-bubble' className='relative flex flex-row bg-white drop-shadow-xl p-8 mb-5 gap-3 border-l-4 border-blue-600'>
+            <div key={'review' + index}>
+              <div id='speech-bubble' className='relative flex flex-row bg-white drop-shadow-xl p-8 mx-3 mb-5 gap-3 border-l-4 border-blue-600'>
                 <div>
                   <BiSolidQuoteLeft className='text-blue-600 text-2xl md:text-3xl'/>
                 </div>
@@ -76,11 +76,11 @@ const ReviewCarousel = () => {
                 <img
                   src={item.image}
                   alt={'review_image' + (index + 1)}
-                  className='w-16 h-16 sm:w-20 sm:h-20 bg-gray-300 object-cover object-center rounded-full'
+                  className='w-14 h-14 sm:w-20 sm:h-20 bg-gray-300 object-cover object-center rounded-full'
                 />
                 <div className='flex flex-col justify-center'>
-                  <h2 className='font-bold md:text-lg'>{item.name}</h2>
-                  <p>{item.placeVisited}</p>
+                  <h2 className='font-bold text-sm sm:text-base md:text-lg'>{item.name}</h2>
+                  <p className='text-xs sm:text-sm md:text-base'>{item.placeVisited}</p>
                 </div>
               </div>
             </div>
