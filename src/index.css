@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --blue-accent: #2563eb;
+}
+
 /* Applied to body when navbar popout menu on mobile is active */
 .no-scroll {
   overflow: hidden;
@@ -37,6 +41,18 @@
 .slanted-text::after {
   right: -14px;
   transform: skewX(-20deg);
+}
+
+#speech-bubble::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 28px 0 0;
+  border-color: #fff transparent transparent transparent;
+  bottom: -20px; /* Adjust this value to position the tail */
+  left: 55px; /* Position the tail horizontally */
 }
 
 
