@@ -1,5 +1,5 @@
 import React from 'react';
-import DestinationSwiper from './DestinationSwiper.jsx';
+import DestinationsSlick from './DestinationsSlick.jsx';
 
 
 const Destinations = () => {
@@ -12,9 +12,8 @@ const Destinations = () => {
           </div>
           <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl mt-3'>Popular Destinations Right Now</h1>
         </div>
-        <div className='relative my-3'>
-          <div className='absolute left-0 right-0 w-full max-w-[1400px] mx-auto bg-gray-100 h-[calc(100%-90px)] bottom-0'></div>
-          <DestinationSwiper />
+        <div className='my-3'>
+          <DestinationsSlick />
         </div>
       </div>
     </div>
