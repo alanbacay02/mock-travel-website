@@ -29,7 +29,7 @@ const Navbar = () => {
             <h1 className='text-sm xs:text-lg sm:text-2xl md:text-3xl font-bold'>HIGH<span className='text-[#56ace1]'>LANDER</span>.</h1>
           </div>
         </a>
-        
+
         <div className='flex flex-row justify-center items-center'>
           {/* Unordered List Items Shown On LG Devices */}
           <div className='hidden lg:flex w-fit h-fit items-center mr-3'>
@@ -70,7 +70,7 @@ const Navbar = () => {
           
           {/* Start of Login Button */}
           <div
-            className='group relative flex justify-center items-center p-1 xs:py-1 xs:px-2 sm:py-1 sm:px-6 ml-1 lg:ml-5 border-b-2 border-transparent hover:border-white hover:cursor-pointer hover:bg-transparent'
+            className='group relative flex justify-center items-center p-1 xs:py-1 xs:px-2 sm:py-1 sm:px-3 md:py-2 md:px-8 ml-1 lg:ml-5 border-b-2 border-transparent hover:border-white hover:cursor-pointer hover:bg-transparent'
             onClick={handleLoginMenu} 
           >
             <p className='font-medium text-[10px] xs:text-xs sm:text-lg'>Log in</p>
@@ -80,7 +80,7 @@ const Navbar = () => {
 
           {/* Start of Signup Button */}
           <div
-            className='group relative flex justify-center items-center p-1 xs:py-1 xs:px-2 sm:py-1 sm:px-6 ml-1 lg:ml-3 border-2 border-white gap-1 hover:cursor-pointer'
+            className='group relative flex justify-center items-center p-1 xs:py-1 xs:px-2 sm:py-1 sm:px-3 lg:py-2 lg:px-8 ml-1 lg:ml-3 border-2 border-white gap-1 hover:cursor-pointer'
             onClick={() => {}} 
           >
             <p className='font-medium text-[10px] xs:text-xs sm:text-lg'>Sign Up</p>
@@ -90,7 +90,7 @@ const Navbar = () => {
 
           {/* Start of Hamburger Menu on Smaller Devices */}
           <div className='block lg:hidden' onClick={handleNavMenu}>
-            {navMenu ? <AiOutlineClose className='text-base xs:text-lg sm:text-xl ml-2 hover:cursor-pointer' /> :  <SlMenu className='text-base xs:text-lg sm:text-2xl ml-2 sm:ml-4 hover:cursor-pointer' /> }
+            {navMenu ? <AiOutlineClose className='text-base xs:text-lg sm:text-2xl ml-2 sm:ml-4 hover:cursor-pointer' /> :  <SlMenu className='text-base xs:text-lg sm:text-2xl ml-2 sm:ml-4 hover:cursor-pointer' /> }
           </div>
           {/* End of Hamburger Menu on Smaller Devices */}
         </div>
