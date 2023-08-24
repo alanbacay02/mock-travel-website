@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+import { Accordion, AccordionItem } from '@szhsin/react-accordion'
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
+
 
 const FAQ_DATA = [
   {
