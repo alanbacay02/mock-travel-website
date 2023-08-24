@@ -40,6 +40,15 @@ const Faq = () => {
       </div>
         
       {/* Start of Accordion */}
+      <Accordion>
+        {FAQ_DATA.map((item, index) => {
+          return (
+            <AccordionItem header={item.question} key={index}>
+              {item.answer}
+            </AccordionItem>
+          )
+        })}
+      </Accordion>
       {/* End of Accordion */}
     </div>
   )
