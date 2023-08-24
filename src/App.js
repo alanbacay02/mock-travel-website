@@ -5,7 +5,8 @@ import Hero from './components/Hero';
 import Navbar from "./components/Navbar";
 import Newsletter from './components/Newsletter';
 import Reviews from './components/Reviews';
-import ValueProposition from './components/ValueProposition';
+import TripBookingSteps from './components/TripBookingSteps';
+
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <Destinations />
-      <ValueProposition />
+      <TripBookingSteps />
       <Reviews />
       <Faq />
       <Newsletter />
