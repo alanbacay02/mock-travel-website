@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Accordion, AccordionItem } from '@szhsin/react-accordion'
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
+import React from 'react'
+import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion'
+import { BsChevronDown } from 'react-icons/bs'
 
 
 const FAQ_DATA = [
@@ -18,18 +18,32 @@ const FAQ_DATA = [
   },
 ];
 
+const AccordionItem = ({ header, ...rest }) => (
+  <Item
+    {...rest}
+    header={({ state: { isEnter } }) => (
+      <>
+        <h2 className='font-medium sm:text-lg md:text-xl'>{header}</h2>
+        <BsChevronDown
+          className={`transition-transform duration-200 ease-out ${isEnter && 'rotate-180'}`}
+        />
+      </>
+    )}
+    className="border-b"
+    buttonProps={{
+      className: ({ isEnter }) =>
+        `flex justify-between items-center w-full px-6 p-4 text-left transition-colors rounded-xl duration-200 ${
+          isEnter && "bg-blue-700 text-white shadow-lg shadow-blue-400"
+        }`
+    }}
+    contentProps={{
+      className: "transition-all duration-200 ease-out"
+    }}
+    panelProps={{ className: "p-4" }}
+  />
+);
+
 const Faq = () => {
-  const [selected, setSelected] = useState(null);
-
-  const toggleAccordion = (index) => {
-    let currentSelected = selected;
-    if (currentSelected === index) {
-      return setSelected(null);
-    }
-    
-    setSelected(index);
-  }
-
   return (
     <div className='w-full py-16 px-6'>
       <div className='flex flex-col justify-center items-center text-center p-2'>
@@ -40,15 +54,17 @@ const Faq = () => {
       </div>
         
       {/* Start of Accordion */}
-      <Accordion>
-        {FAQ_DATA.map((item, index) => {
-          return (
-            <AccordionItem header={item.question} key={index}>
-              {item.answer}
-            </AccordionItem>
-          )
-        })}
-      </Accordion>
+      <div className='max-w-[900px] mx-auto my-7 md:my-12 border-t shadow-2xl rounded-xl'>
+        <Accordion transition transitionTimeout={600}>
+          {FAQ_DATA.map((item, index) => {
+            return (
+              <AccordionItem header={item.question} key={index}>
+                <p className='px-4 py-3 sm:text-lg md:text-xl'>{item.answer}</p>
+              </AccordionItem>
+            )
+          })}
+        </Accordion>
+      </div>
       {/* End of Accordion */}
     </div>
   )
