@@ -20,7 +20,7 @@ const Newsletter = () => {
     <div className='w-full py-12 bg-sky-400 text-black'>
       <div className='max-w-[1240px] grid md:grid-cols-2 gap-x-4 mx-auto px-6 items-center'>
         <div>
-          <h1 className='font-bold text-2xl sm:text-2xl md:text-3xl mb-2 text-center md:text-left'>Don't Miss Out on Your Dream Getaway!</h1>
+          <h1 className='font-bold text-2xl sm:text-2xl md:text-3xl mb-2 text-center md:text-left'>Don't Miss Out On Your Dream Getaway!</h1>
           <p className='text-sm sm:text-base md:text-lg text-center md:text-left'>Your dream vacation is a click away - receive the latest offers and destinations in your inbox.</p>
         </div>
         <div className='my-4'>
