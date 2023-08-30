@@ -66,13 +66,13 @@ const ReviewCarousel = () => {
         {REVIEWS.map((item, index) => {
           return (
             <div key={'review' + index}>
-              <div id='speech-bubble' className='relative flex flex-row bg-white drop-shadow-xl p-8 mx-3 mb-5 gap-3 border-l-4 border-blue-600'>
+              <div id='speech-bubble' className='relative flex flex-row bg-white drop-shadow-xl py-4 px-2 md:p-8 mx-3 mb-5 gap-1 sm:gap-3 border-l-4 border-blue-600'>
                 <div>
-                  <BiSolidQuoteLeft className='text-blue-600 text-2xl md:text-3xl'/>
+                  <BiSolidQuoteLeft className='text-blue-600 text-xl sm:text-2xl md:text-3xl'/>
                 </div>
                 <h2 className='font-medium sm:text-xl md:text-2xl'>{item.review}</h2>
               </div>
-              <div className='flex flex-row gap-3 p-4'>
+              <div className='flex flex-row gap-2 sm:gap-3 py-4 px-1 sm:p-4 sm:pl-6'>
                 <img
                   src={item.image}
                   alt={'review_image' + (index + 1)}
