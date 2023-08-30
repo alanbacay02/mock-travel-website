@@ -1,3 +1,4 @@
+import Accomodation from './components/Accomodation';
 import Destinations from './components/Destinations';
 import Faq from './components/Faq';
 import Footer from './components/Footer';
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <Destinations />
       <TripBookingSteps />
+      <Accomodation />
       <Reviews />
       <Faq />
       <Newsletter />

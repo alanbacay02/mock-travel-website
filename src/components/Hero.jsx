@@ -6,7 +6,7 @@ import Typed from 'react-typed';
 
 const Hero = () => {
   return (
-    <div className='relative h-fit w-full'>
+    <div className='relative h-fit w-full mb-16'>
       {/* Filter for other bg images: bg-stone-800/50 */}
       <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-2 bg-stone-800/70 text-white'>
         <h1 className='text-3xl sm:text-5xl md:text-6xl py-6 font-bold text-center'>Uncover Hidden Horizons<br />with Us</h1>

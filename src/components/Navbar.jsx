@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { SlMenu } from 'react-icons/sl';
-import MountainSVG from './MountainSVG.jsx';
+import MountainSVG from '../svg-components/MountainSVG';
 import PopoutMenu from './PopoutMenu.jsx';
 import LoginMenu from './LoginMenu.jsx';
 

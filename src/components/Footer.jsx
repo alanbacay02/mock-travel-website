@@ -1,5 +1,5 @@
 import React from 'react';
-import MountainSVG from './MountainSVG';
+import MountainSVG from '../svg-components/MountainSVG';
 import { FaDribbbleSquare, FaFacebookSquare, FaGithubSquare, FaInstagram, FaTwitterSquare } from 'react-icons/fa';
 
 const Footer = () => {
