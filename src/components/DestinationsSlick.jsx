@@ -112,7 +112,7 @@ const DestinationsSlick = () => {
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
@@ -123,21 +123,24 @@ const DestinationsSlick = () => {
         breakpoint: 1280, // Change settings for viewport width 1280px and below
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 3
         },
       },
       {
         breakpoint: 980, // Change settings for viewport width 980px and below
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1
         },
       },
       {
         breakpoint: 480, // Change settings for viewport width 7480px and below
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1
         },
       },
-    ],
+    ]
   }
 
   return (
@@ -145,6 +148,7 @@ const DestinationsSlick = () => {
       <Slider ref={slider} {...settings}>
         {CARD_CONTENT.map((item, index) => {
           return (
+            <div className='p-5'>
               <Card
                 key={'carousel-item' + index}
                 title={item.title}
@@ -154,19 +158,20 @@ const DestinationsSlick = () => {
                 price={item.price}
                 rating={item.rating}
               />
+            </div>
           );
         })}
       </Slider>
-      <div className='absolute left-0 right-0 w-full mx-auto bg-gray-100 h-[calc(100%-90px)] bottom-0 -z-10' />
-      <div className='hidden md:flex text-3xl'>
+      {/* <div className='absolute left-0 right-0 w-full mx-auto bg-gray-100 h-[calc(100%-90px)] bottom-0 -z-10' /> */}
+      <div className='absolute -bottom-4 right-5 flex gap-1 md:gap-2 text-sm md:text-xl'>
         <button
-          className='p-3 bg-white text-blue-600 hover:text-white hover:bg-black transition-colors duration-300'
+          className='p-2 text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
           onClick={() => slider?.current?.slickPrev()}
         >
           <FiArrowLeft />
         </button>
         <button
-          className='p-3 bg-blue-600 text-white hover:bg-black transition-colors duration-300'
+          className='p-2 text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
           onClick={() => slider?.current?.slickNext()}
         >
           <FiArrowRight />
