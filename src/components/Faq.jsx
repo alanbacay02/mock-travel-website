@@ -29,11 +29,11 @@ const AccordionItem = ({ header, ...rest }) => (
         />
       </>
     )}
-    className="border-b"
+    className="border-b border-gray-100"
     buttonProps={{
       className: ({ isEnter }) =>
-        `flex justify-between items-center w-full px-6 p-4 text-left transition-colors rounded-xl duration-200 ${
-          isEnter && "bg-blue-700 text-white shadow-lg shadow-blue-400"
+        `flex justify-between items-center w-full px-6 p-4 text-left transition-colors duration-200 ${
+          isEnter && "bg-blue-600 text-white shadow-lg shadow-blue-400"
         }`
     }}
     contentProps={{
@@ -54,12 +54,12 @@ const Faq = () => {
       </div>
         
       {/* Start of Accordion */}
-      <div className='max-w-[900px] mx-auto my-7 md:my-12 border-t shadow-2xl rounded-xl'>
+      <div className='max-w-[900px] mx-auto my-7 md:my-12 border-t border-gray-100 shadow-lg'>
         <Accordion transition transitionTimeout={600}>
           {FAQ_DATA.map((item, index) => {
             return (
               <AccordionItem header={item.question} key={index}>
-                <p className='px-4 py-3 sm:text-lg md:text-xl'>{item.answer}</p>
+                <p className='px-4 py-3 sm:text-lg md:text-xl font-medium text-gray-600'>{item.answer}</p>
               </AccordionItem>
             )
           })}
