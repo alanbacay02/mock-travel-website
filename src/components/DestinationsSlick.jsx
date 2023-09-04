@@ -113,7 +113,7 @@ const DestinationsSlick = () => {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 4,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     prevArrow: '.prev',
