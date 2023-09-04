@@ -4,7 +4,7 @@ import DestinationsSlick from './DestinationsSlick.jsx';
 
 const Destinations = () => {
   return (
-    <div className='relative w-full py-16'>
+    <div className='relative w-full pb-16'>
       <div className='w-full max-w-[1300px] mx-auto'>
         <div className='flex flex-col justify-center items-center text-center p-2 px-6'>
           <div className='slanted-container'>
