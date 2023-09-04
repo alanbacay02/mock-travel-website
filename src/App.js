@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import Navbar from "./components/Navbar";
 import Newsletter from './components/Newsletter';
 import Reviews from './components/Reviews';
+import Travel from './components/Travel';
 import TripBookingSteps from './components/TripBookingSteps';
 
 
@@ -18,6 +19,7 @@ function App() {
       <Destinations />
       <TripBookingSteps />
       <Accomodation />
+      <Travel />
       <FeaturedBlogs />
       <Reviews />
       <Faq />
