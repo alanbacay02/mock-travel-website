@@ -93,7 +93,7 @@ const Accomodation = () => {
           <div className='md:hidden'>
             <AccomodationImageSection />
           </div>
-          <p className='text-xl'>With Highlander, we will make sure to find you the best accomodation at the best rates.</p>
+          <p className='text-lg sm:text-xl '>With Highlander, we will make sure to find you the best accomodation at the best rates.</p>
           <div className='grid grid-cols-2 gap-y-6 my-7 sm:my-9 mx-auto gap-x-3 xs:gap-x-16 md:gap-x-0 md:mx-0 text-gray-700 font-medium text-sm xs:text-base sm:text-xl'>
             <div className='flex flex-col xs:flex-row items-center gap-3'>
               <HiOutlineSparkles className='text-blue-600 text-2xl' />

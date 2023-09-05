@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from "./components/Navbar";
 import Newsletter from './components/Newsletter';
+import Planning from './components/Planning';
 import Reviews from './components/Reviews';
 import Travel from './components/Travel';
 import TripBookingSteps from './components/TripBookingSteps';
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <Destinations />
       <TripBookingSteps />
+      <Planning />
       <Accomodation />
       <Travel />
       <FeaturedBlogs />

@@ -32,8 +32,8 @@ const Hero = () => {
           </div>
         </div>
         <div className='flex flex-row justify-center items-center gap-3 md:gap-8'>
-          <button className='px-2 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 border border-white bg-transparent font-bold text-xs md:text-lg hover:bg-gray-200/60'>LEARN MORE</button>
-          <button className='px-2 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 border border-white bg-gray-200/30 text-white font-bold text-xs md:text-lg hover:bg-gray-200/60'>BOOK NOW</button>
+          <button className='px-2 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 border border-white bg-transparent font-bold text-xs md:text-lg hover:bg-gray-200/60'>Learn More</button>
+          <button className='px-2 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 border border-white bg-gray-200/30 text-white font-bold text-xs md:text-lg hover:bg-gray-200/60'>Plan Your Trip</button>
         </div>
       </div>
       <img className='w-full h-screen object-cover' src={HeroBackground} alt='canyon_neom2.jpg' />
