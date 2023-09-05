@@ -9,7 +9,6 @@ import Newsletter from './components/Newsletter';
 import Planning from './components/Planning';
 import Reviews from './components/Reviews';
 import Transportation from './components/Transportation';
-import Travel from './components/Travel';
 import TripBookingSteps from './components/TripBookingSteps';
 
 
@@ -22,7 +21,6 @@ function App() {
       <TripBookingSteps />
       <Planning />
       <Accomodation />
-      <Travel />
       <Transportation />
       <FeaturedBlogs />
       <Reviews />
