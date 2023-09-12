@@ -85,45 +85,47 @@ const AccomodationImageSection = () => {
 
 const Accomodation = () => {
   return (
-    <div className='w-full max-w-[1360px] mx-auto py-16'>
-      {/* Start of container */}
-      <div className='grid md:grid-cols-2 gap-5 lg:gap-8 px-6'>
-        <div className='flex flex-col justify-center'>
-          <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl mb-3'>Looking for a place to rest?</h1>
-          <div className='md:hidden'>
+    <div className='w-full'>
+      <div className='w-full max-w-[1360px] mx-auto py-16'>
+        {/* Start of container */}
+        <div className='grid md:grid-cols-2 gap-5 lg:gap-8 px-6'>
+          <div className='flex flex-col justify-center'>
+            <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl mb-3'>Looking for a place to rest?</h1>
+            <div className='md:hidden'>
+              <AccomodationImageSection />
+            </div>
+            <p className='text-lg sm:text-xl '>With Highlander, we will make sure to find you the best accomodation at the best rates.</p>
+            <div className='grid grid-cols-2 gap-y-6 my-7 sm:my-9 mx-auto gap-x-3 xs:gap-x-16 md:gap-x-0 md:mx-0 text-gray-700 font-medium text-sm xs:text-base sm:text-xl'>
+              <div className='flex flex-col xs:flex-row items-center gap-3'>
+                <HiOutlineSparkles className='text-blue-600 text-2xl' />
+                <p>Clean Rooms</p>
+              </div>
+              <div className='flex flex-col xs:flex-row items-center gap-3'>
+                <TbAirConditioning className='text-blue-600 text-2xl' />
+                <p>Air Conditioning</p>
+              </div>
+              <div className='flex flex-col xs:flex-row items-center gap-3'>
+                <BiLockAlt className='text-blue-600 text-2xl' />
+                <p>Secure</p>
+              </div>
+              <div className='flex flex-col xs:flex-row items-center gap-3'>
+                <AiOutlineWifi className='text-blue-600 text-2xl' />
+                <p>Internet/Wifi</p>
+              </div>
+            </div>
+            {/* Buttons */}
+            <div className='flex flex-row space-x-4 items-center ml-2 justify-center md:justify-normal'>
+              <button className='px-4 py-3 md:px-8 md:py-4 bg-blue-600 text-white font-bold md:text-lg hover:bg-blue-700 active:bg-blue-800'>Book Now</button>
+              <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 md:text-lg font-semibold ml-auto select-none'>Learn More &gt;</a>
+            </div>
+          </div>
+          <div className='hidden md:block'>
             <AccomodationImageSection />
           </div>
-          <p className='text-lg sm:text-xl '>With Highlander, we will make sure to find you the best accomodation at the best rates.</p>
-          <div className='grid grid-cols-2 gap-y-6 my-7 sm:my-9 mx-auto gap-x-3 xs:gap-x-16 md:gap-x-0 md:mx-0 text-gray-700 font-medium text-sm xs:text-base sm:text-xl'>
-            <div className='flex flex-col xs:flex-row items-center gap-3'>
-              <HiOutlineSparkles className='text-blue-600 text-2xl' />
-              <p>Clean Rooms</p>
-            </div>
-            <div className='flex flex-col xs:flex-row items-center gap-3'>
-              <TbAirConditioning className='text-blue-600 text-2xl' />
-              <p>Air Conditioning</p>
-            </div>
-            <div className='flex flex-col xs:flex-row items-center gap-3'>
-              <BiLockAlt className='text-blue-600 text-2xl' />
-              <p>Secure</p>
-            </div>
-            <div className='flex flex-col xs:flex-row items-center gap-3'>
-              <AiOutlineWifi className='text-blue-600 text-2xl' />
-              <p>Internet/Wifi</p>
-            </div>
-          </div>
-          {/* Buttons */}
-          <div className='flex flex-row space-x-4 items-center ml-2 justify-center md:justify-normal'>
-            <button className='px-4 py-3 md:px-8 md:py-4 bg-blue-600 text-white font-bold md:text-lg hover:bg-blue-700 active:bg-blue-800'>Book Now</button>
-            <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 md:text-lg font-semibold ml-auto select-none'>Learn More &gt;</a>
-          </div>
         </div>
-        <div className='hidden md:block'>
-          <AccomodationImageSection />
-        </div>
-      </div>
 
-      {/* End of container */}
+        {/* End of container */}
+      </div>
     </div>
   );
 }
