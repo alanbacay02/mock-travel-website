@@ -162,7 +162,10 @@ const DestinationsSlick = () => {
           );
         })}
       </Slider>
-      {/* <div className='absolute left-0 right-0 w-full mx-auto bg-gray-100 h-[calc(100%-90px)] bottom-0 -z-10' /> */}
+      <div className='w-full flex flex-row justify-start mt-[-10px] pl-1 md:pl-8'>
+        <a className='font-medium text-blue-600 md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Find More Destinations &gt;</a>
+      </div>
+      
       <div className='absolute -bottom-4 right-5 flex gap-1 md:gap-2 text-sm md:text-xl'>
         <button
           className='p-2 text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
