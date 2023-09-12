@@ -6,10 +6,12 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from "./components/Navbar";
 import Newsletter from './components/Newsletter';
+import AdventureCatalyst from './components/AdventureCatalyst';
 import Planning from './components/Planning';
 import Reviews from './components/Reviews';
 import Transportation from './components/Transportation';
 import TripBookingSteps from './components/TripBookingSteps';
+import ExploreOptions from './components/ExploreOptions';
 
 
 function App() {
@@ -17,11 +19,13 @@ function App() {
     <div>
       <Navbar />
       <Hero />
+      <ExploreOptions />
       <Destinations />
       <TripBookingSteps />
       <Planning />
       <Accomodation />
       <Transportation />
+      <AdventureCatalyst />
       <FeaturedBlogs />
       <Reviews />
       <Faq />
