@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { AiOutlineHeart, AiOutlineSearch } from 'react-icons/ai'
 import { CiLocationArrow1, CiLocationOn } from 'react-icons/ci'
 
@@ -21,10 +21,43 @@ const SEARCH_LOCATIONS = [
   },
 ]
 
-const PopoutDestinations = () => {
+const PopoutDestinations = (props) => {
+  const menuRef = useRef();
+
+  useEffect(() => {
+    // Function to handle click events.
+    let handleClick = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        props.setShowMenu(false); // Sets state `navMenu` to false when click event is outside `menuRef`.
+      }
+    }
+    // Adds event listener for `mousedown` events.
+    document.addEventListener('mousedown', handleClick);
+
+    // Clean up event listener and remove 'no-scroll' class when component unmounts.
+    const popoutMenu = menuRef.current;
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+      document.body.classList.remove('no-scroll');
+      popoutMenu.style.overflow = 'hidden';
+    }
+  }, [props]);
+
+  useEffect(() => {
+    const popoutMenu = menuRef.current;
+    // Add or remove 'no-scroll' class based on the 'navMenu' state.
+    if (props.showMenu) {
+      document.body.classList.add('no-scroll');
+      popoutMenu.style.overflow = 'auto';
+    } else {
+      document.body.classList.remove('no-scroll');
+      popoutMenu.style.overflow = 'hidden';
+    }
+  }, [props]);
+
   return (
-    <div className='fixed top-1/3 left-0 right-0 z-50 overflow-hidden'>
-      <div className='px-4 py-2 w-[90%] max-w-[800px] bg-white mx-auto rounded-xl'>
+    <div className={`fixed top-1/3 left-0 right-0 z-50 overflow-hidden ${props.showMenu ? 'block' : 'hidden'}`}>
+      <div ref={menuRef}  className='px-4 py-2 w-[90%] max-w-[800px] bg-white mx-auto rounded-xl'>
         <form onSubmit={() => {}}>
           <div className='w-full flex flex-row items-center gap-2 border-b-2 border-black border-spacing-2 px-1 my-3'>
             <label htmlFor='text' className='sr-only'>Search Destination</label>

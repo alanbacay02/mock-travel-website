@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiBed, BiGlobe } from 'react-icons/bi'
 import { BsGlobeAmericas } from 'react-icons/bs'
 import { LuPlane } from 'react-icons/lu'
@@ -28,16 +28,12 @@ const BUTTON_INFO = [
   },
 ]
 
-const onClickFunctions = [
+const onClickFunctions = (showMenu, setShowMenu) => [
   () => {  // logic for the "Explore" button
-    return (
-      console.log('Explore button has been pressed')
-    )
+    setShowMenu(!showMenu)
   },
   () => {  // logic for the "Hotels" button
-    return (
-      console.log('Hotels button has been pressed')
-    )
+    setShowMenu(!showMenu)
   },
   () => {  // logic for the "Car Rent" button
     // Car Rent button leads to a different page
@@ -51,6 +47,10 @@ const onClickFunctions = [
 ]
 
 const ExploreOptions = () => {
+  const [showMenu, setShowMenu] = useState(false)
+
+  const clickHandlers = onClickFunctions(showMenu, setShowMenu)
+
   return (
     <div className='w-full py-7'>
       <div className='w-full mx-auto max-w-[1300px]'>
@@ -59,7 +59,7 @@ const ExploreOptions = () => {
               return (
                 <button
                   key={index}
-                  onClick={onClickFunctions[index]}
+                  onClick={clickHandlers[index]}
                   className='group relative rounded-2xl py-3 px-4 mr-2 border border-gray-400 hover:border-blue-600 transition-colors duration-500 font-medium overflow-clip'
                 >
                   <div className='flex flex-row items-center justify-between gap-2 group-hover:text-white transition-colors duration-500'>
@@ -93,7 +93,7 @@ const ExploreOptions = () => {
           })}
         </div>
       </div>
-      <PopoutDestinations />
+      <PopoutDestinations showMenu={showMenu} setShowMenu={setShowMenu} />
     </div>
   )
 }
