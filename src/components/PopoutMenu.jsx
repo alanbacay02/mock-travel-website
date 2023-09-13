@@ -29,8 +29,10 @@ const PopoutMenu = (props) => {
 
   useEffect(() => {
     const popoutMenu = menuRef.current;
-    // Add or remove 'no-scroll' class based on the 'navMenu' state.
-    if (props.navMenu) {
+    // Get the current viewport width.
+    const viewportWidth = window.innerWidth;
+    // Add or remove 'no-scroll' class based on the 'navMenu' state and viewport size.
+    if (props.navMenu && viewportWidth < 768) { // Adds a no-scroll class if viewport is less than to 768px.
       document.body.classList.add('no-scroll');
       popoutMenu.style.overflow = 'auto';
     } else {
