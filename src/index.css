@@ -81,6 +81,16 @@
 }
 
 
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
 @media screen and (min-width: 640px) {
   /* When viewport width is 640px or greater,
