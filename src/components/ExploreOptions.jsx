@@ -3,6 +3,7 @@ import { BiBed, BiGlobe } from 'react-icons/bi'
 import { BsGlobeAmericas } from 'react-icons/bs'
 import { LuPlane } from 'react-icons/lu'
 import { MdOutlineDirectionsCarFilled } from 'react-icons/md'
+import PopoutDestinations from './PopoutDestinations'
 
 const BUTTON_INFO = [
   {
@@ -92,6 +93,7 @@ const ExploreOptions = () => {
           })}
         </div>
       </div>
+      <PopoutDestinations />
     </div>
   )
 }
