@@ -28,27 +28,28 @@ const BUTTON_INFO = [
   },
 ]
 
+// Define an array of click handlers for different buttons within the ExploreOptions component.
+// These handlers control the behavior of the showMenu state.
 const onClickFunctions = (showMenu, setShowMenu) => [
-  () => {  // logic for the "Explore" button
+  () => {  // logic for the "Explore" button - toggles the showMenu state.
     setShowMenu(!showMenu)
   },
-  () => {  // logic for the "Hotels" button
+  () => {  // logic for the "Hotels" button - also toggles the showMenu state.
     setShowMenu(!showMenu)
   },
-  () => {  // logic for the "Car Rent" button
-    // Car Rent button leads to a different page
+  () => {  // logic for the "Car Rent" button -  leads to a different page.
   },
-  () => {  // logic for the "Flights" button
-    // Flights button leads to a different page
+  () => {  // logic for the "Flights" button -  leads to a different page.
   },
-  () => {  // logic for the "Blogs" button
-    // Blogs button leads to a different page
+  () => {  // logic for the "Blogs" button -  leads to a different page.
   },
 ]
 
 const ExploreOptions = () => {
+  // Creates state `showMenu` to track the state of `PopoutDestinations`.
   const [showMenu, setShowMenu] = useState(false)
 
+  // Obtain the click handlers for buttons.
   const clickHandlers = onClickFunctions(showMenu, setShowMenu)
 
   return (
@@ -78,7 +79,7 @@ const ExploreOptions = () => {
             return (
               <button
                 key={index}
-                onClick={onClickFunctions[index]}
+                onClick={clickHandlers[index]}
                 className='group relative rounded-2xl py-3 px-4 border border-gray-400 hover:border-blue-600 transition-colors duration-500 font-medium overflow-clip'
               >
                 <div className='flex flex-row items-center justify-between group-hover:text-white transition-colors duration-500'>
