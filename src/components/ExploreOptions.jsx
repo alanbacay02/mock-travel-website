@@ -3,7 +3,7 @@ import { BiBed, BiGlobe } from 'react-icons/bi'
 import { BsGlobeAmericas } from 'react-icons/bs'
 import { LuPlane } from 'react-icons/lu'
 import { MdOutlineDirectionsCarFilled } from 'react-icons/md'
-import PopoutDestinations from './PopoutDestinations'
+import PopoutOptions from './PopoutOptions'
 
 const BUTTON_INFO = [
   {
@@ -61,11 +61,11 @@ const ExploreOptions = () => {
                 <button
                   key={index}
                   onClick={clickHandlers[index]}
-                  className='group relative rounded-2xl py-3 px-4 mr-2 border border-gray-400 hover:border-blue-600 transition-colors duration-500 font-medium overflow-clip'
+                  className='group relative rounded-2xl py-2 px-4 mr-2 border border-gray-400 hover:border-blue-600 transition-colors duration-500 font-medium overflow-clip'
                 >
-                  <div className='flex flex-row items-center justify-between gap-2 group-hover:text-white transition-colors duration-500'>
-                    <p>{items.buttonName}</p>
-                    <div className='text-xl'>
+                  <div className='flex flex-row items-center justify-between gap-7 group-hover:text-white transition-colors duration-500'>
+                    <p className='text-sm xs:text-md'>{items.buttonName}</p>
+                    <div className='text-lg xs:text-xl'>
                       {items.icon}
                     </div>
                   </div>
@@ -94,7 +94,7 @@ const ExploreOptions = () => {
           })}
         </div>
       </div>
-      <PopoutDestinations showMenu={showMenu} setShowMenu={setShowMenu} />
+      <PopoutOptions showMenu={showMenu} setShowMenu={setShowMenu} />
     </div>
   )
 }
