@@ -148,7 +148,7 @@ const DestinationsSlick = () => {
       <Slider ref={slider} {...settings}>
         {CARD_CONTENT.map((item, index) => {
           return (
-            <div className='p-5'>
+            <div className='px-5 pb-4'>
               <Card
                 key={'carousel-item' + index}
                 title={item.title}
@@ -162,8 +162,8 @@ const DestinationsSlick = () => {
           );
         })}
       </Slider>
-      <div className='w-full flex flex-row justify-start mt-[-10px] pl-1 md:pl-8'>
-        <a className='font-medium text-blue-600 md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Find More Destinations &gt;</a>
+      <div className='w-full flex flex-row justify-start mt-[-5px] md:mt-[-15px] pl-8'>
+        <a className='font-medium text-blue-600 text-sm md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Find More Destinations &gt;</a>
       </div>
       
       <div className='absolute -bottom-4 right-5 flex gap-1 md:gap-2 text-sm md:text-xl'>
