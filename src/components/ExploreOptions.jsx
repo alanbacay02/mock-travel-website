@@ -4,6 +4,7 @@ import { BsGlobeAmericas } from 'react-icons/bs'
 import { LuPlane } from 'react-icons/lu'
 import { MdOutlineDirectionsCarFilled } from 'react-icons/md'
 import PopoutOptions from './PopoutOptions'
+import { FiMoreHorizontal } from 'react-icons/fi'
 
 const BUTTON_INFO = [
   {
@@ -25,6 +26,10 @@ const BUTTON_INFO = [
   {
     buttonName: 'Blogs',
     icon: <BiGlobe />
+  },
+  {
+    buttonName: 'More',
+    icon: <FiMoreHorizontal />
   },
 ]
 
@@ -53,8 +58,8 @@ const ExploreOptions = () => {
   const clickHandlers = onClickFunctions(showMenu, setShowMenu)
 
   return (
-    <div className='w-full py-7'>
-      <div className='w-full mx-auto max-w-[1300px]'>
+    <div className='w-full pt-7 pb-5'>
+      <div className='w-full mx-auto max-w-[1300px] px-6'>
         <div className='scrolling-wrapper md:hidden pl-2'>
           {BUTTON_INFO.map((items, index) => {
               return (
@@ -74,7 +79,7 @@ const ExploreOptions = () => {
               )
             })}
         </div>
-        <div className='hidden md:grid grid-cols-5 gap-7 px-6'>
+        <div className='hidden md:grid grid-cols-6 gap-7'>
           {BUTTON_INFO.map((items, index) => {
             return (
               <button
