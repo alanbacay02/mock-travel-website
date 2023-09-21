@@ -32,7 +32,7 @@ const STEP_DATA = [
 
 const TripBookingSteps = () => {
   return (
-    <div className='w-full py-16 px-6'>
+    <div className='w-full pt-11 pb-5 md:py-11 px-6'>
       <div className='w-full max-w-[1300px] mx-auto'>
         <div className='flex flex-col justify-center items-center text-center p-2'>
           <div className='slanted-container'>
