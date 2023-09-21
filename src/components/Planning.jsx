@@ -53,7 +53,7 @@ const PlanningImageSection = () => {
 
 const Planning = () => {
   return (
-    <div className='w-full max-w-[1360px] mx-auto py-16'>
+    <div className='w-full max-w-[1360px] mx-auto py-10 md:py-16'>
       <div className='grid md:grid-cols-2 gap-5 lg:gap-8 px-6'>
         <div className='hidden md:block'>
           <PlanningImageSection />
