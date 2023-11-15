@@ -104,7 +104,7 @@ const BlogsSlick = () => {
       <div className='w-full flex flex-row justify-between'>
         {/* Start of Link Container */}
         <div className='w-full flex flex-row justify-start pl-1 md:pl-5'>
-          <a className='font-medium text-blue-600 md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Read More Blogs &gt;</a>
+          <a className='font-medium text-blue-600 text-sm md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Read More Blogs &gt;</a>
         </div>
         {/* End of Link Container */}
         <div className='flex gap-1 md:gap-2 text-sm md:text-xl'>
