@@ -66,9 +66,9 @@ const Planning = () => {
           <p className='text-lg sm:text-xl mt-6 md:m-0'>Planning your dream getaway has never been this easy. Our user-friendly planning interface is designed with you in mind, making every step of your journey a breeze.</p>
           <p className='text-lg sm:text-xl mt-3'>From choosing your destination to crafting the perfect itinerary, we've got you covered.</p>
           {/* Buttons */}
-          <div className='flex flex-row space-x-4 items-center mt-10 ml-1 justify-center md:justify-normal'>
-          <button className='px-4 py-3 md:px-8 md:py-4 bg-blue-600 text-white font-bold md:text-lg hover:bg-blue-700 active:bg-blue-800' onClick={() => {}}>Plan Your Trip Now</button>
-            <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 md:text-lg font-semibold ml-auto select-none'>Learn More &gt;</a>
+          <div className='flex flex-row space-x-4 items-center mt-10 justify-center md:justify-normal'>
+            <button className='px-2 py-3 sm:px-4 sm:py-3 lg:px-6 lg:py-4 bg-blue-600 text-white font-bold text-xs xs:te md:text-lg hover:bg-blue-700 active:bg-blue-800' onClick={() => {}}>Plan Your Trip Now</button>
+            <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 text-xs xs:text-sm md:text-lg font-semibold ml-auto select-none'>Learn More &gt;</a>
           </div>
         </div>
       </div>
