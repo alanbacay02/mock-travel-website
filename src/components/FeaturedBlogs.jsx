@@ -7,13 +7,18 @@ const FeaturedBlogs = () => {
   return (
     <div className='relative w-full py-16 overflow-clip'>
       <div className='w-full max-w-[1300px] mx-auto px-6'>
+        {/* Start of Header Content */}
         <div className='flex flex-col justify-center items-center text-center p-2 px-6'>
           <div className='slanted-container'>
             <p className='slanted-text font-medium text-base md:text-lg text-white bg-blue-500 py-1'>FEATURED BLOGS</p>
           </div>
           <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl mt-3'>Read Our Latest Blog Posts</h1>
         </div>
+        {/* End of Header Content */}
+
+        {/* Start of Blog Container */}
         <div className='flex flex-col w-full justify-center items-center mt-10 mx-auto'>
+          {/* Start of Featured Blog Item */}
           <div className='relative hover:cursor-pointer h-fit w-full overflow-clip mb-4 rounded-xl group'>
             <div className='absolute top-0 mt-2 ml-3 md:mt-5 md:ml-6 left-0 z-50'>
               <p className='font-bold text-sm md:text-lg text-white py-1 px-3 rounded-3xl bg-black/20'>Popular Right Now</p>
@@ -31,13 +36,16 @@ const FeaturedBlogs = () => {
               alt='hero-blog-img'
             />
           </div>
-          <BlogsSlick />
-          <div className='w-full flex flex-row justify-start pl-1 md:pl-5'>
-            <a className='font-medium text-blue-600 md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Read More Blogs &gt;</a>
-          </div>
+          {/* End of Featured Blog Item */}
+
+          {/* Blog Carousel */}
+          <BlogsSlick /> 
+          {/* End of Blog Carousel */}
         </div>
+        {/* End of Blog Container */}
       </div>
 
+      {/* MAP SVG BACKGROUNDS */}
       <div className='absolute top-0 bottom-0 md:-right-1/2 w-[1000px] md:w-full h-full scale-150 -z-50 fill-gray-200'>
         <MapSVG />
       </div>

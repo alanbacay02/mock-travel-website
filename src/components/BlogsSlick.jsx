@@ -100,20 +100,32 @@ const BlogsSlick = () => {
         })}
       </Slider>
       {/* <div className='absolute left-0 right-0 w-full mx-auto bg-gray-100 h-[calc(100%-90px)] bottom-0 -z-10' /> */}
-      <div className='absolute -bottom-9 right-2 md:-bottom-12 md:right-5 flex gap-1 md:gap-2 text-sm md:text-xl'>
-        <button
-          className='p-2 text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
-          onClick={() => slider?.current?.slickPrev()}
-        >
-          <FiArrowLeft />
-        </button>
-        <button
-          className='p-2 text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
-          onClick={() => slider?.current?.slickNext()}
-        >
-          <FiArrowRight />
-        </button>
+      {/* Start of Controls and Link Container */}
+      <div className='w-full flex flex-row justify-between'>
+        {/* Start of Link Container */}
+        <div className='w-full flex flex-row justify-start pl-1 md:pl-5'>
+          <a className='font-medium text-blue-600 md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Read More Blogs &gt;</a>
+        </div>
+        {/* End of Link Container */}
+        <div className='flex gap-1 md:gap-2 text-sm md:text-xl'>
+          <button
+            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            onClick={() => slider?.current?.slickPrev()}
+          >
+            <FiArrowLeft />
+          </button>
+          <button
+            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            onClick={() => slider?.current?.slickNext()}
+          >
+            <FiArrowRight />
+          </button>
+        </div>
+        {/* Start of Controls Container */}
+
+
       </div>
+      {/* End of Controls and Link Container */}
     </div>
   )
 }

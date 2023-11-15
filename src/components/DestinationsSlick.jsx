@@ -144,11 +144,11 @@ const DestinationsSlick = () => {
   }
 
   return (
-    <div className='relative'>
+    <div>
       <Slider ref={slider} {...settings}>
         {CARD_CONTENT.map((item, index) => {
           return (
-            <div className='px-5 pb-4'>
+            <div className='px-4 pb-4'>
               <Card
                 key={'carousel-item' + index}
                 title={item.title}
@@ -162,23 +162,27 @@ const DestinationsSlick = () => {
           );
         })}
       </Slider>
-      <div className='w-full flex flex-row justify-start mt-[-5px] md:mt-[-15px] pl-8'>
-        <a className='font-medium text-blue-600 text-sm md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Find More Destinations &gt;</a>
-      </div>
-      
-      <div className='absolute -bottom-4 right-5 flex gap-1 md:gap-2 text-sm md:text-xl'>
-        <button
-          className='p-2 text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
-          onClick={() => slider?.current?.slickPrev()}
-        >
-          <FiArrowLeft />
-        </button>
-        <button
-          className='p-2 text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
-          onClick={() => slider?.current?.slickNext()}
-        >
-          <FiArrowRight />
-        </button>
+      <div className='w-full flex flex-row justify-between items-start px-4 mt-[-5px] md:mt-[-15px] '>
+        <div className='sm:pl-1'>
+          <a className='font-medium text-blue-600 text-sm md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Find More Destinations &gt;</a>
+        </div>
+
+        {/* Start of Carousel Control Buttons */}
+        <div className='flex gap-1 md:gap-2 text-sm sm:text-xl'>
+          <button
+            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            onClick={() => slider?.current?.slickPrev()}
+          >
+            <FiArrowLeft />
+          </button>
+          <button
+            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            onClick={() => slider?.current?.slickNext()}
+          >
+            <FiArrowRight />
+          </button>
+        </div>
+        {/* End of Carousel Control Buttons */}
       </div>
     </div>
   );
