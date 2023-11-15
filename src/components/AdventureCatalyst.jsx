@@ -3,7 +3,7 @@ import { ContourSVG2 } from '../svg-components/BackgroundSVG'
 
 const AdventureCatalyst = () => {
   return (
-    <div className='relative w-full py-20 bg-stone-50 overflow-clip -z-50'>
+    <div className='relative w-full py-20 md:my-14 bg-stone-50 overflow-clip -z-50'>
       <div className='w-full max-w-[800px] mx-auto'>
         <div className='flex flex-col justify-center items-center text-center p-2 px-6'>
           <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl mt-3 bg-stone-50'>Elate Your Adventure</h1>

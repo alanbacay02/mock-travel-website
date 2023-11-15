@@ -1,5 +1,4 @@
 import React from 'react'
-import { TireTrackSVG } from '../svg-components/BackgroundSVG'
 
 const AccomodationImageSection = () => {
   return (
@@ -38,10 +37,6 @@ const Transportation = () => {
             <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 md:text-lg font-semibold ml-auto select-none'>Learn More &gt;</a>
           </div>
         </div>
-      </div>
-
-      <div className='absolute -top-[340px] md:top-2 left-[6%] md:left-[4%] w-[400px] md:w-auto h-full scale-150 md:scale-100 fill-gray-100 -z-50'>
-        <TireTrackSVG />
       </div>
     </div>
   </div>
