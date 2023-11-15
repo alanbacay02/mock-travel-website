@@ -170,13 +170,13 @@ const DestinationsSlick = () => {
         {/* Start of Carousel Control Buttons */}
         <div className='flex gap-1 md:gap-2 text-sm sm:text-xl'>
           <button
-            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            className='p-1 sm:p-2 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
             onClick={() => slider?.current?.slickPrev()}
           >
             <FiArrowLeft />
           </button>
           <button
-            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            className='p-1 sm:p-2 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
             onClick={() => slider?.current?.slickNext()}
           >
             <FiArrowRight />
