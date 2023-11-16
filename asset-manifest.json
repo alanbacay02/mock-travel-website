@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/mock-travel-website/static/css/main.2836de75.css",
-    "main.js": "/mock-travel-website/static/js/main.2f65f184.js",
+    "main.css": "/mock-travel-website/static/css/main.26174eff.css",
+    "main.js": "/mock-travel-website/static/js/main.8d7c870a.js",
     "static/media/mountainSunset.jpg": "/mock-travel-website/static/media/mountainSunset.3bc6fc9aa6846cbbe40c.jpg",
     "static/media/slick.svg": "/mock-travel-website/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/mock-travel-website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/mock-travel-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/mock-travel-website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/mock-travel-website/index.html",
-    "main.2836de75.css.map": "/mock-travel-website/static/css/main.2836de75.css.map",
-    "main.2f65f184.js.map": "/mock-travel-website/static/js/main.2f65f184.js.map"
+    "main.26174eff.css.map": "/mock-travel-website/static/css/main.26174eff.css.map",
+    "main.8d7c870a.js.map": "/mock-travel-website/static/js/main.8d7c870a.js.map"
   },
   "entrypoints": [
-    "static/css/main.2836de75.css",
-    "static/js/main.2f65f184.js"
+    "static/css/main.26174eff.css",
+    "static/js/main.8d7c870a.js"
   ]
 }
