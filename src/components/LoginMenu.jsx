@@ -85,30 +85,30 @@ const LoginMenu = (props) => {
           </div>
         </div>
         {/* Forgot Password Link */}
-        <a href='/#' className='mr-1 mt-2 underline text-blue-600 hover:cursor-pointer text-xs sm:text-sm active:text-blue-400 font-semibold ml-auto select-none'>Forgot Password?</a>
+        <a href='/#' className='mr-1 mt-2 underline text-blue-600 hover:cursor-pointer hover:text-blue-500 text-xs sm:text-sm active:text-blue-400 font-semibold ml-auto select-none'>Forgot Password?</a>
         {/* Submit Button */}
         <button
-          className='bg-blue-600 mx-auto my-7 px-14 sm:px-16 py-2 rounded-lg text-white sm:text-lg active:bg-blue-800'
+          className='bg-blue-600 mx-auto my-7 px-14 sm:px-16 py-2 rounded-lg text-white sm:text-lg hover:bg-blue-700'
           type='submit'
         >
           Login
         </button>
         {/* Other Sign In methods */}
-        <label className='text-center my-2 font-medium sm:text-lg' htmlFor='button'>Or Sign in with:</label>
-        <div className='flex flex-row justify-center items-center gap-6 mt-2 mb-8 text-lg xs:text-xl sm:text-xl md:text-2xl'>
-          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+        <label className='text-center my-2 sm:mt-4 font-medium sm:text-lg' htmlFor='button'>Or Sign in with:</label>
+        <div className='flex flex-row justify-center items-center gap-6 mt-2 mb-8 sm:mb-14 text-lg xs:text-xl sm:text-xl md:text-2xl'>
+          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 hover:bg-gray-100'>
             <FaFacebookF />
           </button>
-          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 hover:bg-gray-100'>
             <AiOutlineTwitter />
           </button>
-          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 active:bg-gray-100'>
+          <button type='button' className='px-5 sm:px-6 py-2 sm:py-3 shadow-md shadow-blue-400/80 rounded-3xl text-blue-600 hover:bg-gray-100'>
             <FaGooglePlusG />
           </button>
         </div>
         {/* Sign Up link */}
         <div className='border-t border-gray-400'>
-          <p className='mt-3 text-right font-normal text-sm sm:text-base'>Not a member? <a href='/#' className='underline text-blue-600 hover:cursor-pointer active:text-blue-400'>Sign Up</a></p>
+          <p className='mt-3 text-right font-normal text-sm sm:text-base'>Not a member? <a href='/#' className='underline text-blue-600 hover:cursor-pointer hover:text-blue-500'>Sign Up</a></p>
         </div>
       </form>
       {/* End of Login Form */}
