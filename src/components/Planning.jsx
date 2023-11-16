@@ -9,6 +9,7 @@ const PlanningImageSection = () => {
         className='w-full h-full mx-auto object-cover object-bottom rounded-xl'
         src='https://images.unsplash.com/photo-1604363937376-bde1acf2a658?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' 
         alt='hotel_room.jpg'
+        loading='lazy'
       />
       
       <div className='acc-div-shadow absolute right-2 -bottom-4 md:right-4 md:-bottom-8 h-min w-[90%] md:w-[60%] px-4 py-2 md:px-7 md:py-3 flex flex-row justify-between rounded-2xl bg-white text-[10px] xs:text-sm sm:text-base'>

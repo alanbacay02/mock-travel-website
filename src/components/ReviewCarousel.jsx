@@ -77,6 +77,7 @@ const ReviewCarousel = () => {
                   src={item.image}
                   alt={'review_image' + (index + 1)}
                   className='w-14 h-14 sm:w-20 sm:h-20 bg-gray-300 object-cover object-center rounded-full'
+                  loading='lazy'
                 />
                 <div className='flex flex-col justify-center'>
                   <h2 className='font-bold text-sm sm:text-base md:text-lg'>{item.name}</h2>

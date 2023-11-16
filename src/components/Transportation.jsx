@@ -7,6 +7,7 @@ const AccomodationImageSection = () => {
         className='h-full w-fit scale-150 object-cover shadow-xl'
         src='https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80' 
         alt='hotel_room.jpg'
+        loading='lazy'
       />
     </div>
   )

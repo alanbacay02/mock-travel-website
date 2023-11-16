@@ -89,7 +89,7 @@ const BlogsSlick = () => {
           return (
             <div className='px-2 my-5'>
               <div className='group mx-auto w-full relative overflow-clip rounded-xl shadow-lg hover:cursor-pointer'>
-                <img className='w-full h-[400px] scale-110 object-cover group-hover:scale-100 transition-all duration-500' src={item.blogImgSrc} alt={`blogItem${index}`} />
+                <img className='w-full h-[400px] scale-110 object-cover group-hover:scale-100 transition-all duration-500' src={item.blogImgSrc} alt={`blogItem${index}`} loading='lazy' />
                 <div className='w-full h-[120px] md:h-[130px] absolute bottom-0 left-0 flex flex-col pl-3 pb-2 bg-white z-50'>
                   <h3 className='pt-3 font-medium text-base md:text-lg max-w-[85%]'>{item.blogTitle}</h3>
                   <p className='font-medium text-sm md:text-base text-gray-600'>{item.blogCategory}</p>

@@ -34,6 +34,7 @@ const FeaturedBlogs = () => {
               className='w-full object-cover object-center h-[400px] md:h-[400px] rounded-xl scale-110 group-hover:scale-100 transition-all duration-500 -z-20'
               src='https://images.unsplash.com/photo-1590835192370-3941b97e93fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80'
               alt='hero-blog-img'
+              loading='lazy'
             />
           </div>
           {/* End of Featured Blog Item */}

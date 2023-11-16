@@ -35,6 +35,7 @@ const AccomodationImageSection = () => {
         className='w-[full] h-[280px] xs:h-[330px] sm:h-[380px] md:h-[450px] mt-12 mb-5 mx-auto object-cover shadow-xl rounded-xl'
         src='https://www.niagaratower.com/images/resort-tower-king-hotel-room.jpg' 
         alt='hotel_room.jpg'
+        loading='lazy'
       />
 
       <div className='acc-div-shadow absolute left-[8%] -top-[17%] xs:-top-[12%] sm:left-[14%] px-2 py-2 sm:px-3 md:px-4 bg-white shadow-md rounded-2xl text-[10px] xs:text-sm sm:text-base'>

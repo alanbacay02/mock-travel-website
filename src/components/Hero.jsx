@@ -36,7 +36,7 @@ const Hero = () => {
           <button className='px-2 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 border border-white bg-gray-200/30 text-white font-bold text-xs md:text-lg hover:bg-gray-200/60'>Plan Your Trip</button>
         </div>
       </div>
-      <img className='w-full h-screen object-cover' src={HeroBackground} alt='canyon_neom2.jpg' />
+      <img className='w-full h-screen object-cover' loading='lazy' src={HeroBackground} alt='canyon_neom2.jpg' />
     </div>
   );
 }

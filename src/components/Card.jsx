@@ -6,7 +6,7 @@ const Card = ({image, imageAlt, rating, title, location, price}) => {
   return (
     <figure className='group relative flex flex-col h-fit w-fit mx-auto my-3 md:my-5 hover:cursor-pointer bg-white shadow-lg rounded-xl overflow-clip'> 
       {/* Insert src image here from JSON */}
-      <img className='w-[250px] h-[250px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] scale-110 md:group-hover:scale-100 transition-all duration-500 object-cover object-center pointer-events-none rounded-t-xl -z-0' src={image} alt={imageAlt} />
+      <img className='w-[250px] h-[250px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] scale-110 md:group-hover:scale-100 transition-all duration-500 object-cover object-center pointer-events-none rounded-t-xl -z-0' src={image} alt={imageAlt} loading='lazy' />
       <div className='absolute flex flex-row justify-center items-center top-0 right-0 px-3 mr-1 mt-2 rounded-full bg-gray-900/30 text-white hover:cursor-pointer select-none'>
         <AiFillStar className='text-yellow-400' scale={10} />
         <p className='text-sm sm:text-base pl-1'>{rating}</p>
