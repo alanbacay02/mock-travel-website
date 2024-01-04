@@ -22,7 +22,7 @@ Hello! I'm *Alan*. It seems you have found one of my website projects. This is a
 * Learn how to map over mock JSON data and display them dynamically using carousels.
 
 # My Socials!
-* [My Website!](alanbacay.dev)
+* [My Website!](www.alanbacay.dev)
 * [Linkedin](https://www.linkedin.com/in/alan-neale-bacay-ii-60aa48258/)
 * [Github](https://github.com/alanbacay02)
 * [My Email](galaxybacay@gmail.com)
