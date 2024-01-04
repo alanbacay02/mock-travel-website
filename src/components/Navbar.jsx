@@ -103,10 +103,7 @@ const Navbar = () => {
       </div>
 
       <PopoutMenu navMenu={navMenu} setNavMenu={setNavMenu} handleNavMenu={handleNavMenu} />
-      <LoginMenu loginMenu={loginMenu} setLoginMenu={setLoginMenu} handleLoginMenu={handleLoginMenu} />
-      {/* Overlay that appears behind `loginMenu` when active */}
-      {/* Navbar: z-10; PopoutMenu: z-10; LoginMenu: z-50; Overlay: z-20 */}
-      <div id='overlay' className={loginMenu ? 'absolute top-0 left-0 w-full h-screen bg-black/50 z-20' : 'hidden'} />
+      { loginMenu && <LoginMenu loginMenu={loginMenu} setLoginMenu={setLoginMenu} handleLoginMenu={handleLoginMenu} />}
     </div>
   );
 }
