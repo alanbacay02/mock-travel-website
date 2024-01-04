@@ -19,7 +19,7 @@ const Transportation = () => {
     <div className='w-full max-w-[1200px] mx-auto'>
       {/* Start of container */}
       <div className='grid md:grid-cols-2 gap-5 lg:gap-8 px-6'>
-        <div className='block md:hidden'>
+        <div>
           <AccomodationImageSection />
         </div>
         <div className='flex flex-col justify-center'>
