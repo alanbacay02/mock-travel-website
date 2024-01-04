@@ -23,6 +23,6 @@ Hello! I'm *Alan*. It seems you have found one of my website projects. This is a
 
 # My Socials!
 * [My Website!](www.alanbacay.dev)
-* [Linkedin](https://www.linkedin.com/in/alan-neale-bacay-ii-60aa48258/)
+* [Linkedin](https://www.linkedin.com/in/alanbacay/)
 * [Github](https://github.com/alanbacay02)
-* [My Email](galaxybacay@gmail.com)
+* [My Email](alanjbacay@gmail.com)
