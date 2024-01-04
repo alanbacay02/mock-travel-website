@@ -60,7 +60,8 @@ const ExploreOptions = () => {
   return (
     <div className='w-full pt-7 pb-5'>
       <div className='w-full mx-auto max-w-[1200px] px-6'>
-        <div className='scrolling-wrapper md:hidden pl-2'>
+        {/* Options Scrolling Wrapper for sm Devices */}
+        <div className='scrolling-wrapper lg:hidden pl-2'>
           {BUTTON_INFO.map((items, index) => {
               return (
                 <button
@@ -70,7 +71,7 @@ const ExploreOptions = () => {
                 >
                   <div className='flex flex-row items-center justify-between gap-7 group-hover:text-white transition-colors duration-500'>
                     <p className='text-sm xs:text-md'>{items.buttonName}</p>
-                    <div className='text-lg xs:text-xl'>
+                    <div className='text-lg'>
                       {items.icon}
                     </div>
                   </div>
@@ -79,19 +80,18 @@ const ExploreOptions = () => {
               )
             })}
         </div>
-        <div className='hidden md:grid grid-cols-6 gap-7'>
+        {/* Options Grid for lg Devices */}
+        <div className='hidden lg:grid grid-cols-6 gap-7'>
           {BUTTON_INFO.map((items, index) => {
             return (
               <button
                 key={index}
                 onClick={clickHandlers[index]}
-                className='group relative rounded-2xl py-3 px-4 border border-gray-400 hover:border-blue-600 transition-colors duration-500 font-medium overflow-clip'
+                className='group relative rounded-2xl py-2 px-4 border border-gray-400 hover:border-blue-600 transition-colors duration-500 font-medium overflow-clip'
               >
-                <div className='flex flex-row items-center justify-between group-hover:text-white transition-colors duration-500'>
+                <div className='flex flex-row items-center justify-between group-hover:text-white transition-colors duration-500 text-sm'>
                   <p>{items.buttonName}</p>
-                  <div className='text-xl'>
                     {items.icon}
-                  </div>
                 </div>
                 <div className='absolute left-0 top-0 bottom-0 h-full -z-50 bg-blue-600 w-0 group-hover:w-full transition-all duration-500' />
               </button>

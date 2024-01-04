@@ -5,6 +5,29 @@ import MountainSVG from '../svg-components/MountainSVG';
 import PopoutMenu from './PopoutMenu.jsx';
 import LoginMenu from './LoginMenu.jsx';
 
+const NAVBAR_ITEMS = [
+  {
+    linkTitle: 'Home',
+    href: '\#'
+  },
+  {
+    linkTitle: 'About',
+    href: '\#'
+  },
+  {
+    linkTitle: 'Explore',
+    href: '\#'
+  },
+  {
+    linkTitle: 'Tickets',
+    href: '\#'
+  },
+  {
+    linkTitle: 'Hotels',
+    href: '\#'
+  },
+]
+
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
@@ -26,44 +49,27 @@ const Navbar = () => {
             <div className='w-[30px] xs:w-[50px] sm:w-[70px] h-full fill-white'>
               <MountainSVG />
             </div>
-            <h1 className='text-sm xs:text-lg sm:text-2xl md:text-3xl font-bold'>HIGH<span className='text-[#56ace1]'>LANDER</span>.</h1>
+            <h1 className='text-base sm:text-lg font-bold'>HIGH<span className='text-[#56ace1]'>LANDER</span>.</h1>
           </div>
         </a>
 
         <div className='flex flex-row justify-center items-center'>
           {/* Unordered List Items Shown On LG Devices */}
           <div className='hidden lg:flex w-fit h-fit items-center mr-3'>
-            <ul className='flex flex-row justify-center items-center gap-10 xl:gap-14 text-lg'>
-              <li className='hover:cursor-pointer'>
-                <a href='/#' className='text-center group transition-all duration-300'>
-                  Home
-                  <span className='block max-w-0 group-hover:max-w-full transition-all ease-in-out duration-500 h-0.5 bg-white z-30' />
-                </a>
-              </li>
-              <li className='hover:cursor-pointer'>
-                <a href='/#' className='group transition-all duration-300'>
-                  About
-                  <span className='block max-w-0 group-hover:max-w-full ease-in-out duration-500 h-0.5 bg-white z-30' />
-                </a>
-              </li>
-              <li className='hover:cursor-pointer'>
-                <a href='/#' className='group transition-all duration-300'>
-                  Explore
-                  <span className='block max-w-0 group-hover:max-w-full transition-all ease-in-out duration-500 h-0.5 bg-white z-30' />
-                </a>
-              </li>
-              <li className='hover:cursor-pointer'>
-                <a href='/#' className='group transition-all duration-300'>
-                  Tickets
-                  <span className='block max-w-0 group-hover:max-w-full ease-in-out duration-500 h-0.5 bg-white z-30' />
-                </a>
-              </li>
-              <li className='hover:cursor-pointer'>
-                <a href='/#' className='group transition-all duration-300'>
-                  Hotels
-                  <span className='block max-w-0 group-hover:max-w-full transition-all ease-in-out duration-500 h-0.5 bg-white z-30' />
-                </a>
-              </li>
+            <ul className='flex flex-row justify-center items-center gap-12 text-sm'>
+              {NAVBAR_ITEMS.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className='hover:cursor-pointer'
+                  >
+                    <a href={item.href} className='text-center group transition-all duration-300'>
+                      {item.linkTitle}
+                      <span className='block max-w-0 group-hover:max-w-full transition-all ease-in-out duration-500 h-0.5 bg-white z-30' />
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           {/* End of Unordered List Items Shown On LG Devices */}
@@ -73,7 +79,7 @@ const Navbar = () => {
             className='group relative flex justify-center items-center p-1 xs:py-1 xs:px-2 sm:py-1 sm:px-3 md:py-2 md:px-8 ml-1 lg:ml-5 border-b-2 border-transparent hover:border-white hover:cursor-pointer hover:bg-transparent'
             onClick={handleLoginMenu} 
           >
-            <p className='font-medium text-[10px] xs:text-xs sm:text-lg'>Log in</p>
+            <p className='font-medium text-[10px] text-xs sm:text-sm'>Log in</p>
             <div className='absolute bottom-0 h-0 w-full bg-blue-600 -z-10 group-hover:h-full ease-in-out duration-500' />
           </div>
           {/* End of Login Button */}
@@ -83,7 +89,7 @@ const Navbar = () => {
             className='group relative flex justify-center items-center p-1 xs:py-1 xs:px-2 sm:py-1 sm:px-3 lg:py-2 lg:px-8 ml-1 lg:ml-3 border-2 border-white gap-1 hover:cursor-pointer'
             onClick={() => {}} 
           >
-            <p className='font-medium text-[10px] xs:text-xs sm:text-lg'>Sign Up</p>
+            <p className='font-medium text-[10px] text-xs sm:text-sm'>Sign Up</p>
             <div className='absolute inset-0 h-0 w-full bg-blue-600 -z-10 group-hover:h-full ease-in-out duration-500' />
           </div>
           {/* End of Signup Button */}
