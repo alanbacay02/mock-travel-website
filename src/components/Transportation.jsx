@@ -19,23 +19,23 @@ const Transportation = () => {
     <div className='w-full max-w-[1200px] mx-auto'>
       {/* Start of container */}
       <div className='grid md:grid-cols-2 gap-5 lg:gap-8 px-6'>
-        <div className=''>
+        <div className='block md:hidden'>
           <AccomodationImageSection />
         </div>
         <div className='flex flex-col justify-center'>
-          <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mb-3'>Book a Car</h1>
-          <p className='text-lg sm:text-xl '>Through Highlander and our partners, we will make sure to find you the best vehicle that suits your travel needs.</p>
+          <h1 className='font-bold text-xl sm:text-2xl mb-3'>Book a Car</h1>
+          <p className='text-sm sm:text-base'>Through Highlander and our partners, we will make sure to find you the best vehicle that suits your travel needs.</p>
           {/* Buttons */}
           <div className='flex flex-row space-x-4 items-center mt-3 ml-2 justify-center md:justify-normal'>
-          <button className='px-2 py-3 sm:px-4 sm:py-3 lg:px-6 lg:py-4 bg-blue-600 text-white font-bold text-xs xs:te md:text-lg hover:bg-blue-700 active:bg-blue-800' onClick={() => {}}>Rent Now</button>
-              <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 text-xs xs:text-sm md:text-lg font-semibold ml-auto select-none'>Learn More &gt;</a>
+            <button className='px-2 py-3 sm:px-4 bg-blue-600 text-white font-medium text-xs sm:text-sm hover:bg-blue-700 active:bg-blue-800' onClick={() => {}}>Rent Now</button>
+            <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 text-xs sm:text-sm font-semibold ml-auto select-none'>Learn More &gt;</a>
           </div>
-          <h1 className='font-bold text-xl sm:text-2xl md:text-3xl mt-7 mb-3'>Book an Airline</h1>
-          <p className='text-lg sm:text-xl '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam expedita ullam in aut assumenda laboriosam, perspiciatis quod repellendus magnam suscipit consequuntur libero harum quasi officiis repellat!</p>
+          <h1 className='font-bold text-xl sm:text-2xl mt-7 mb-3'>Book an Airline</h1>
+          <p className='text-sm sm:text-base'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam expedita ullam in aut assumenda laboriosam, perspiciatis quod repellendus magnam suscipit consequuntur libero harum quasi officiis repellat!</p>
           {/* Buttons */}
           <div className='flex flex-row space-x-4 items-center mt-3 ml-2 justify-center md:justify-normal'>
-            <button className='px-2 py-3 sm:px-4 sm:py-3 lg:px-6 lg:py-4 bg-blue-600 text-white font-bold text-xs xs:te md:text-lg hover:bg-blue-700 active:bg-blue-800' onClick={() => {}}>Book Now</button>
-            <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 text-xs xs:text-sm md:text-lg font-semibold ml-auto select-none'>Learn More &gt;</a>
+            <button className='px-2 py-3 sm:px-4 bg-blue-600 text-white font-medium text-xs sm:text-sm hover:bg-blue-700 active:bg-blue-800' onClick={() => {}}>Book Now</button>
+            <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 text-xs sm:text-sm font-semibold ml-auto select-none'>Learn More &gt;</a>
           </div>
         </div>
       </div>

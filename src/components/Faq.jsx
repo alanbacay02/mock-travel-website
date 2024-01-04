@@ -23,7 +23,7 @@ const AccordionItem = ({ header, ...rest }) => (
     {...rest}
     header={({ state: { isEnter } }) => (
       <>
-        <h2 className='font-medium sm:text-lg md:text-xl'>{header}</h2>
+        <h2 className='font-medium text-sm sm:text-base'>{header}</h2>
         <BsChevronDown
           className={`transition-transform duration-200 ease-out ${isEnter && 'rotate-180'}`}
         />
@@ -48,9 +48,9 @@ const Faq = () => {
     <div className='w-full py-16 px-6'>
       <div className='max-w-[1200px] flex flex-col justify-center items-center mx-auto text-center p-2'>
         <div className='slanted-container'>
-          <p className='slanted-text font-medium text-base md:text-lg text-white bg-blue-500 py-1'>Frequently Asked Questions</p>
+          <p className='slanted-text font-medium text-xs sm:text-sm text-white bg-blue-500 py-1'>Frequently Asked Questions</p>
         </div>
-        <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl mt-3'>Let Us Answer Your Questions</h1>
+        <h1 className='font-bold text-xl sm:text-2xl mt-3'>Let Us Answer Your Questions</h1>
       </div>
         
       {/* Start of Accordion */}
@@ -59,7 +59,7 @@ const Faq = () => {
           {FAQ_DATA.map((item, index) => {
             return (
               <AccordionItem header={item.question} key={index}>
-                <p className='px-4 py-3 sm:text-lg md:text-xl font-medium text-gray-600'>{item.answer}</p>
+                <p className='px-4 py-3 text-sm sm:text-base font-medium text-gray-600'>{item.answer}</p>
               </AccordionItem>
             )
           })}

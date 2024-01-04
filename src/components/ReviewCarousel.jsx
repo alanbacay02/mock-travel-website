@@ -48,18 +48,18 @@ const ReviewCarousel = () => {
 
   return (
     <div>
-      <div className='hidden md:flex justify-end gap-2 p-2'>
+      <div className='hidden md:flex justify-end gap-2 p-2 text-lg'>
         <button
-          className='bg-white rounded-full p-2'
+          className='bg-white rounded-full p-1'
           onClick={() => slider?.current?.slickPrev()}
         >
-          <FiArrowLeft className='text-blue-600 text-2xl' />
+          <FiArrowLeft className='text-blue-600' />
         </button>
         <button
-          className='bg-white rounded-full p-2'
+          className='bg-white rounded-full p-1'
           onClick={() => slider?.current?.slickNext()}
         >
-          <FiArrowRight className='text-blue-600 text-2xl' />
+          <FiArrowRight className='text-blue-600' />
         </button>
       </div>
       <Slider ref={slider} {...settings}>
@@ -68,20 +68,20 @@ const ReviewCarousel = () => {
             <div key={'review' + index}>
               <div id='speech-bubble' className='relative flex flex-row bg-white drop-shadow-xl py-4 px-2 md:p-8 mx-3 mb-5 gap-1 sm:gap-3 border-l-4 border-blue-600'>
                 <div>
-                  <BiSolidQuoteLeft className='text-blue-600 text-xl sm:text-2xl md:text-3xl'/>
+                  <BiSolidQuoteLeft className='text-blue-600 text-xl sm:text-2xl'/>
                 </div>
-                <h2 className='font-medium sm:text-xl md:text-2xl'>{item.review}</h2>
+                <h2 className='font-medium text-sm sm:text-base'>{item.review}</h2>
               </div>
               <div className='flex flex-row gap-2 sm:gap-3 py-4 px-1 sm:p-4 sm:pl-6'>
                 <img
                   src={item.image}
                   alt={'review_image' + (index + 1)}
-                  className='w-14 h-14 sm:w-20 sm:h-20 bg-gray-300 object-cover object-center rounded-full'
+                  className='w-14 h-14 bg-gray-300 object-cover object-center rounded-full'
                   loading='lazy'
                 />
                 <div className='flex flex-col justify-center'>
-                  <h2 className='font-bold text-sm sm:text-base md:text-lg'>{item.name}</h2>
-                  <p className='text-xs sm:text-sm md:text-base'>{item.placeVisited}</p>
+                  <h2 className='font-bold text-sm sm:text-base'>{item.name}</h2>
+                  <p className='text-xs sm:text-sm'>{item.placeVisited}</p>
                 </div>
               </div>
             </div>

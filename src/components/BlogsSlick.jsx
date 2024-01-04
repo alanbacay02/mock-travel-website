@@ -91,8 +91,8 @@ const BlogsSlick = () => {
               <div className='group mx-auto w-full relative overflow-clip rounded-xl shadow-lg hover:cursor-pointer'>
                 <img className='w-full h-[400px] scale-110 object-cover group-hover:scale-100 transition-all duration-500' src={item.blogImgSrc} alt={`blogItem${index}`} loading='lazy' />
                 <div className='w-full h-[120px] md:h-[130px] absolute bottom-0 left-0 flex flex-col pl-3 pb-2 bg-white z-50'>
-                  <h3 className='pt-3 font-medium text-base md:text-lg max-w-[85%]'>{item.blogTitle}</h3>
-                  <p className='font-medium text-sm md:text-base text-gray-600'>{item.blogCategory}</p>
+                  <h3 className='pt-3 font-medium text-sm max-w-[85%]'>{item.blogTitle}</h3>
+                  <p className='font-medium text-xs text-gray-600'>{item.blogCategory}</p>
                 </div>
               </div>
             </div>
@@ -104,18 +104,18 @@ const BlogsSlick = () => {
       <div className='w-full flex flex-row justify-between'>
         {/* Start of Link Container */}
         <div className='w-full flex flex-row justify-start pl-1 md:pl-5'>
-          <a className='font-medium text-blue-600 text-sm md:text-lg hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Read More Blogs &gt;</a>
+          <a className='font-medium text-blue-600 text-sm hover:underline hover:cursor-pointer underline-offset-2' href='/#'>Read More Blogs &gt;</a>
         </div>
         {/* End of Link Container */}
-        <div className='flex gap-1 md:gap-2 text-sm md:text-xl'>
+        <div className='flex gap-1 md:gap-2 text-sm sm:text-base'>
           <button
-            className='p-1 sm:p-2 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
             onClick={() => slider?.current?.slickPrev()}
           >
             <FiArrowLeft />
           </button>
           <button
-            className='p-1 sm:p-2 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
+            className='p-1 h-fit w-fit text-gray-400 border-2 border-gray-400 rounded-full hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-colors duration-300'
             onClick={() => slider?.current?.slickNext()}
           >
             <FiArrowRight />

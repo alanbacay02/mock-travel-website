@@ -46,6 +46,7 @@ const AccomodationImageSection = () => {
           {REVIEW_PROFILE.map((item, index) => {
             return (
               <img
+                key={index}
                 className='acc-prof-img absolute w-7 h-7 xs:w-8 xs:h-8 rounded-full border-2 border-white object-cover object-top'
                 src={item.imageSrc}
                 alt={item.imageAlt}
@@ -118,7 +119,7 @@ const Accomodation = () => {
               </div>
             </div>
             {/* Buttons */}
-            <div className='flex flex-row space-x-4 items-center mt-4 sm:mt-6 justify-center md:justify-normal'>
+            <div className='flex flex-row space-x-4 items-center justify-center md:justify-normal'>
               <button className='px-2 py-3 sm:px-4 bg-blue-600 text-white font-medium text-xs sm:text-sm hover:bg-blue-700 active:bg-blue-800' onClick={() => {}}>Book Now</button>
               <a href='/#' className='m-1 text-blue-700 hover:cursor-pointer hover:underline underline-offset-2 active:text-blue-400 text-xs sm:text-sm font-semibold ml-auto select-none'>Learn More &gt;</a>
           </div>

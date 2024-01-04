@@ -47,8 +47,8 @@ const PopoutMenu = (props) => {
       <div 
         ref={menuRef} 
         className={ props.navMenu
-          ? 'fixed h-screen top-0 right-0 w-[85%] bg-white text-black ease-in-out duration-500 shadow-2xl md:block md:absolute md:h-fit md:right-4 md:top-[80px] md:w-[300px] md:rounded-lg md:transition-none z-10'
-          : 'right-[-100%] fixed h-screen top-0 w-[85%] bg-white text-black ease-in-out duration-500 md:transition-none z-10'
+          ? 'fixed h-screen top-0 right-0 w-[85%] bg-white text-black ease-in-out duration-500 shadow-2xl md:block md:absolute md:h-fit md:right-4 md:top-[80px] md:w-[300px] md:rounded-lg md:transition-none z-50'
+          : 'right-[-100%] fixed h-screen top-0 w-[85%] bg-white text-black ease-in-out duration-500 md:transition-none z-50'
         }
       >
         <ul className='flex flex-col h-fit text-base sm:text-lg'>
