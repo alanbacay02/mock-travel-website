@@ -6,7 +6,7 @@ import { MapSVG } from '../svg-components/BackgroundSVG'
 const FeaturedBlogs = () => {
   return (
     <div className='relative w-full py-16 overflow-clip'>
-      <div className='w-full max-w-[1300px] mx-auto px-6'>
+      <div className='w-full max-w-[1200px] mx-auto px-6'>
         {/* Start of Header Content */}
         <div className='flex flex-col justify-center items-center text-center p-2 px-6'>
           <div className='slanted-container'>

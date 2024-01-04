@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className='relative h-fit w-full'>
       {/* Filter for other bg images: bg-stone-800/50 */}
-      <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-2 bg-stone-800/70 text-white'>
+      <div className='absolute top-0 left-0 right-0 w-full max-w-[1200px] h-full flex flex-col justify-center items-center px-2 mx-auto text-white z-10'>
         <h1 className='text-3xl sm:text-5xl md:text-6xl py-6 font-bold text-center'>Uncover Hidden Horizons<br />with Us</h1>
         <p className='max-w-[900px] text-sm sm:text-xl md:text-2xl sm:pt-2 text-center'>Our expert team curates immersive itineraries, blending exploration, culture, and awe-inspiring encounters</p>
         <div className='w-full max-w-[900px] flex flex-row my-4 sm:my-8 pl-2 sm:pl-4 md:pl-6 pr-2 py-1 sm:py-2 rounded-3xl bg-transparent border border-gray-100/90'>
@@ -36,7 +36,12 @@ const Hero = () => {
           <button className='px-2 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 border border-white bg-gray-200/30 text-white font-bold text-xs md:text-lg hover:bg-gray-200/60'>Plan Your Trip</button>
         </div>
       </div>
-      <img className='w-full h-screen object-cover' loading='lazy' src={HeroBackground} alt='canyon_neom2.jpg' />
+      
+      {/* Dark Overlay for Hero Img */}
+      <div className='absolute w-full h-full bg-stone-800/70 z-0' />
+      
+      {/* Hero Background Img */}
+      <img className='w-full h-screen object-cover -z-50' loading='lazy' src={HeroBackground} alt='canyon_neom2.jpg' />
     </div>
   );
 }

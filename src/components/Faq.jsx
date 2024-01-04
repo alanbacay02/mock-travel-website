@@ -46,7 +46,7 @@ const AccordionItem = ({ header, ...rest }) => (
 const Faq = () => {
   return (
     <div className='w-full py-16 px-6'>
-      <div className='flex flex-col justify-center items-center text-center p-2'>
+      <div className='max-w-[1200px] flex flex-col justify-center items-center mx-auto text-center p-2'>
         <div className='slanted-container'>
           <p className='slanted-text font-medium text-base md:text-lg text-white bg-blue-500 py-1'>Frequently Asked Questions</p>
         </div>

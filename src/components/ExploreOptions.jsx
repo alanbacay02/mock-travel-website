@@ -59,7 +59,7 @@ const ExploreOptions = () => {
 
   return (
     <div className='w-full pt-7 pb-5'>
-      <div className='w-full mx-auto max-w-[1300px] px-6'>
+      <div className='w-full mx-auto max-w-[1200px] px-6'>
         <div className='scrolling-wrapper md:hidden pl-2'>
           {BUTTON_INFO.map((items, index) => {
               return (
