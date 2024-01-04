@@ -99,7 +99,7 @@ const ExploreOptions = () => {
           })}
         </div>
       </div>
-      <PopoutOptions showMenu={showMenu} setShowMenu={setShowMenu} />
+      {showMenu && <PopoutOptions showMenu={showMenu} setShowMenu={setShowMenu} />}
     </div>
   )
 }
